@@ -9,7 +9,7 @@ function Main() {
 	const [programs, setPrograms] = useState(PROGRAMS);
 
 	return (
-		<div>
+		<div className="main">
 			<Switch>
 				<Route exact path="/">
 					<Home />

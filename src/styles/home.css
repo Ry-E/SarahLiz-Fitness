@@ -1,7 +1,55 @@
-h1 {
-	font-size: 14px;
+.headline {
+	font-size: 18px;
+	font-weight: bold;
 }
 
-h2 {
-	font-size: 24px;
+/* body {
+	background-color: black;
+} */
+
+.home {
+	height: 100vh;
+	padding-top: 10px;
+}
+
+@media only screen and (min-device-width: 500px) {
+	.home {
+		display: flex;
+		height: 100vh;
+		margin: 25px 130px 0px 130px;
+	}
+
+	.portrait_container {
+		width: 50%;
+	}
+
+	.portrait {
+		border-radius: 100%;
+		width: 55%;
+		margin-right: auto;
+		display: block;
+		margin-left: auto;
+		box-shadow: -5px 5px 5px #89a5dd;
+	}
+
+	.info_container {
+		width: 50%;
+	}
+
+	.headline {
+		padding-top: 15px;
+	}
+
+	.list {
+		padding-top: 18px;
+		font-weight: 600;
+	}
+
+	li {
+		padding-top: 7px;
+	}
+}
+
+li {
+	white-space: pre-wrap;
 }

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Home from './HomeComponent';
-import Programs from './ProgramComponent';
-import About from './AboutComponent';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import '../styles/header.css';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
 	render() {
 		return (
-			<div className="App">
-				<ul>
+			<div className="header">
+				<h1 className="company">SarahLiz Fitness</h1>
+				<ul className="navbar">
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/programs">Programs</NavLink>
 					<NavLink to="/about">About</NavLink>

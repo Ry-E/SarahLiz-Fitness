@@ -7,10 +7,10 @@ import './App.css';
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<Header className="header" />
-				<Main className="main" />
-				<Footer className="footer" />
+			<div className="app">
+				<Header />
+				<Main />
+				<Footer />
 			</div>
 		);
 	}
