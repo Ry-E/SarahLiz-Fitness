@@ -2,6 +2,15 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.main {
+	background-image: url('./assets/images/gym.jpg');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 /* .card-title {
   font: 500 1.25rem "Lobster", cursive;
 }
