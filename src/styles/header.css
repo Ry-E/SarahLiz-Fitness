@@ -3,9 +3,11 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 64px;
-	margin: 0px 48px 0px 48px;
-	position: sticky;
+	padding: 0px 48px 0px 48px;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	background-color: white;
 }
 

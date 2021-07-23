@@ -8,15 +8,24 @@
 } */
 
 .home {
+	background-image: url('../assets/images/gym_small.jpg');
+	background-color: white;
+	background-size: cover;
+	background-position: center center;
 	height: 100vh;
 	padding-top: 10px;
 }
 
 @media only screen and (min-device-width: 500px) {
 	.home {
+		background-image: url('../assets/images/gym_large.jpg');
+		background-color: white;
+		background-size: cover;
+		background-position: center center;
 		display: flex;
 		height: 100vh;
-		margin: 25px 130px 0px 130px;
+		margin: auto;
+		padding: 100px 130px 0px 130px;
 	}
 
 	.portrait_container {
