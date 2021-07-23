@@ -5,33 +5,22 @@ import '../styles/home.css';
 function Home() {
 	return (
 		<div className="home">
-			<div className="portrait_container">
-				<img
-					className="portrait"
-					src={portrait}
-					alt="A friendly looking trainer"
-				/>
-			</div>
-			<div className="info_container">
+			<div className="home_content">
 				<h1 className="headline">
-					Online Health Coach | Personal Trainer | NPC Posing Coach
+					Online Health Coach | Personal Trainer{'\n'}NPC Posing Coach
 				</h1>
-				<ul className="list">
-					<li>
-						B.S. Michigan State University: Kinesiology,
-						Specialization- Exercise Science, Cognates- Fitness
-						Leadership & Health Promotion
-					</li>
-					<li>
-						ACSM CPT: American College Sports Medicine Certified
-						Personal Trainer
-					</li>
-					<li>
-						IFBBPro: International Federation of Bodybuilding
-						Professional Bikini Competitor
-					</li>
-					<li className="experience">Experience: 9+ yrs</li>
-				</ul>
+				<div className="portrait_container">
+					<img
+						className="portrait"
+						src={portrait}
+						alt="A friendly looking trainer"
+					/>
+				</div>
+				<div className="info_container">
+					<div className="info">
+						<p>"We work on your fitness, diet, AND mindset."</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
