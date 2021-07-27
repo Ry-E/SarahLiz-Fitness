@@ -32,6 +32,9 @@ function Footer() {
 			<a href="https://www.freepik.com/vectors/people">
 				People vector created by pch.vector - www.freepik.com
 			</a>
+			<a href="https://www.freepik.com/photos/background">
+				Background photo created by freepik - www.freepik.com
+			</a>
 		</div>
 	);
 }

@@ -1,7 +1,7 @@
 .headline {
 	font-family: 'Oswald', sans-serif;
 	/* font-family: 'Zen Loop', cursive; */
-	font-size: 50px;
+	font-size: 40px;
 	letter-spacing: 1px;
 	line-height: 1.4;
 	text-transform: uppercase;
@@ -18,12 +18,28 @@ body {
 } */
 
 .home {
-	background-image: url('../assets/images/gym_small.jpg');
+	background-image: url('../assets/images/sporty.jpeg');
 	background-color: white;
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
 	padding-top: 10px;
+}
+
+.home_content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 60px;
+}
+
+.portrait {
+	border-radius: 10%;
+	width: 70%;
+	margin-right: auto;
+	display: block;
+	margin-left: auto;
+	box-shadow: 5px 5px 5px rgb(88, 88, 88);
 }
 
 @media only screen and (min-device-width: 500px) {
@@ -69,7 +85,7 @@ body {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 40px;
 		font-weight: 700;
-		color: rgb(255, 255, 255);
+		color: #000000;
 		line-height: 1.3;
 		text-align: center;
 		/* background-color: rgba(255, 255, 255, 0.5); */

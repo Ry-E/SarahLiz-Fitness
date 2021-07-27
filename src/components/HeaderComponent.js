@@ -1,20 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../styles/header.css';
 import { NavLink } from 'react-router-dom';
 
-class Header extends Component {
-	render() {
-		return (
-			<div className="header">
-				<h1 className="company">SarahLiz Fitness</h1>
-				<ul className="navbar">
+function Header() {
+	const [navbarOpen, setNavbarOpen] = useState(false);
+
+	const handleToggle = () => {
+		setNavbarOpen(prev => !prev);
+	};
+
+	return (
+		<div className={`header ${navbarOpen ? 'showMenu' : ''}`}>
+			<h1 className="company">SarahLiz Fitness</h1>
+			<button onClick={handleToggle}>
+				{navbarOpen ? 'Close' : 'Open'}
+			</button>
+			<nav className="navbar">
+				<ul className="menuNav">
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/programs">Programs</NavLink>
 					<NavLink to="/about">About</NavLink>
 				</ul>
-			</div>
-		);
-	}
+			</nav>
+		</div>
+	);
 }
 
 export default Header;
