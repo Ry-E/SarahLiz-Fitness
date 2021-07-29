@@ -6,9 +6,7 @@ function Home() {
 	return (
 		<div className="home">
 			<div className="home_content">
-				<h1 className="headline">
-					Online Health Coach | Personal Trainer{'\n'}NPC Posing Coach
-				</h1>
+				<h1 className="headline">Expert Health & Fitness Coach</h1>
 				<div className="portrait_container">
 					<img
 						className="portrait"

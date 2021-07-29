@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PROGRAMS } from '../shared/programs';
+import '../styles/program.css';
 import {
 	Card,
 	CardImg,

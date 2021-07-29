@@ -3,12 +3,13 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 64px;
-	padding: 0px 48px 0px 48px;
+	padding: 10px 12px 10px 12px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: transparent;
+	background-color: black;
+	z-index: 1;
 }
 
 .header * {
@@ -19,27 +20,36 @@
 .company {
 	align-items: center;
 	font-weight: bold;
-	color: #ffe600;
+	color: white;
 	margin: 0;
 }
 
-.navbar {
+.navBar {
+	display: none;
 	font-weight: bold;
-	margin: 0;
+	margin: 10px 0px;
+	z-index: 1000;
 }
 
-.navbar a {
+.navBar a {
 	text-decoration: none;
 	padding: 0 10px;
 	font-size: 20px;
+	text-transform: uppercase;
 }
 
 .menuNav {
 	display: none;
+	margin: 0;
 }
 
 button {
-	color: black;
+	background: transparent;
+	border: none;
+}
+
+.header button:focus {
+	outline: none;
 }
 
 /* .navbar a:hover {
@@ -49,15 +59,24 @@ button {
 
 .showMenu {
 	height: auto;
-	background-color: white;
-	align-items: stretch;
+	background-color: black;
 	flex-wrap: wrap;
 }
 
-.showMenu .navbar {
+.showMenu .navBar {
 	width: 100%;
-	/* display: flex;
-	flex-direction: column; */
+	display: flex;
+	padding-top: 5px;
+	transition: 2s ease-in-out;
+}
+
+.showMenu button {
+	background: transparent;
+	border: none;
+}
+
+.showMenu button:focus {
+	outline: none;
 }
 
 .showMenu .menuNav {
@@ -68,7 +87,7 @@ button {
 }
 
 .showMenu a {
-	color: black;
+	color: white;
 	text-decoration: none;
 	padding: 0 10px;
 	font-size: 20px;
@@ -89,7 +108,7 @@ button {
 	}
 
 	.header * {
-		color: #ffe600;
+		color: white;
 		font-size: 24px;
 	}
 
@@ -100,18 +119,18 @@ button {
 		margin: 0;
 	}
 
-	.navbar {
+	.navBar {
 		font-weight: bold;
 		margin: 0;
 	}
 
-	.navbar a {
+	.navBar a {
 		text-decoration: none;
 		padding: 0 10px;
 		font-size: 20px;
 	}
 
-	.navbar a:hover {
+	.navBar a:hover {
 		text-decoration: none;
 		color: #89a5dd;
 	}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 import '../styles/header.css';
 import { NavLink } from 'react-router-dom';
 
@@ -9,17 +11,43 @@ function Header() {
 		setNavbarOpen(prev => !prev);
 	};
 
+	const closeMenu = () => {
+		setNavbarOpen(false);
+	};
+
 	return (
 		<div className={`header ${navbarOpen ? 'showMenu' : ''}`}>
 			<h1 className="company">SarahLiz Fitness</h1>
 			<button onClick={handleToggle}>
-				{navbarOpen ? 'Close' : 'Open'}
+				{navbarOpen ? (
+					<MdClose
+						style={{
+							color: 'white',
+							width: '40px',
+							height: '40px',
+						}}
+					/>
+				) : (
+					<FiMenu
+						style={{
+							color: 'white',
+							width: '40px',
+							height: '40px',
+						}}
+					/>
+				)}
 			</button>
-			<nav className="navbar">
+			<nav className="navBar">
 				<ul className="menuNav">
-					<NavLink to="/">Home</NavLink>
-					<NavLink to="/programs">Programs</NavLink>
-					<NavLink to="/about">About</NavLink>
+					<NavLink to="/" onClick={() => closeMenu()} exact>
+						Home
+					</NavLink>
+					<NavLink to="/programs" onClick={() => closeMenu()} exact>
+						Programs
+					</NavLink>
+					<NavLink to="/about" onClick={() => closeMenu()} exact>
+						About
+					</NavLink>
 				</ul>
 			</nav>
 		</div>
