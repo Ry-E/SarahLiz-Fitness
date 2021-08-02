@@ -14,6 +14,10 @@ function Home() {
 						alt="A friendly looking trainer"
 					/>
 				</div>
+				<h2 className="services">
+					Online Health Coach &#9900; Personal Trainer &#9900; NPC
+					Posing Coach
+				</h2>
 				<div className="info_container">
 					<div className="info">
 						<p>"We work on your fitness, diet, AND mindset."</p>

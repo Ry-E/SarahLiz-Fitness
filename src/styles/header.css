@@ -14,13 +14,15 @@
 
 .header * {
 	/* color: #ffe600; */
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .company {
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 1px;
 	align-items: center;
 	font-weight: bold;
-	color: white;
+	color: aquamarine;
 	margin: 0;
 }
 

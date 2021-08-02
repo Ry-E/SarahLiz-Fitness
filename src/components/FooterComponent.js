@@ -6,19 +6,9 @@ function Footer() {
 			<div className="info_container">
 				<div className="info">
 					<ul className="list">
-						<li>
-							B.S. Michigan State University: Kinesiology,
-							Specialization- Exercise Science, Cognates- Fitness
-							Leadership & Health Promotion
-						</li>
-						<li>
-							ACSM CPT: American College Sports Medicine Certified
-							Personal Trainer
-						</li>
-						<li>
-							IFBBPro: International Federation of Bodybuilding
-							Professional Bikini Competitor
-						</li>
+						<li>B.S. Kinesiology, Michigan State University</li>
+						<li>Certified Personal Trainer</li>
+						<li>Professional Bikini Competitor</li>
 						<li className="experience">Experience: 9+ yrs</li>
 					</ul>
 				</div>
