@@ -16,9 +16,7 @@ function Home() {
 					Online Health Coach &#9900; Personal Trainer &#9900; NPC
 					Posing Coach
 				</h2>
-				<div className="info">
-					<p>"We work on your fitness, diet, AND mindset."</p>
-				</div>
+				<button className="apply_button">APPLY</button>
 			</div>
 		</div>
 	);

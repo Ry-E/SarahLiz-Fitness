@@ -68,6 +68,14 @@ li {
 	white-space: pre-wrap;
 }
 
+.apply_button {
+	color: black;
+	background-color: aquamarine;
+	padding: 14px 30px;
+	margin: auto;
+	margin-top: 30px;
+}
+
 @media only screen and (min-device-width: 500px) {
 	.home {
 		background-image: url('../assets/images/squat.jpeg');
