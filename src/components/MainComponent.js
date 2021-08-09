@@ -12,7 +12,7 @@ function Main() {
 		<div className="main">
 			<Switch>
 				<Route exact path="/">
-					<Home />
+					<Home programs={programs} />
 				</Route>
 				<Route path="/about">
 					<About />
