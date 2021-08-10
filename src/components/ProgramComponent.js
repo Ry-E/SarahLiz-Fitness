@@ -41,25 +41,19 @@ class Programs extends Component {
 		const program = this.props.programs.map(program => {
 			return (
 				<div key={program.id} className="col-md-5 m-1">
-					<Card>
+					<Card onClick={() => this.onProgramSelect(program)}>
 						<CardTitle>
 							<CardBody>
 								{program.name}
-								<CardImg
+								{/* <CardImg
 									className=""
 									width="100%"
 									src={program.image}
 									alt={program.name}
-								/>
+								/> */}
 							</CardBody>
 						</CardTitle>
 					</Card>
-					{/* <Card onClick={() => this.onProgramSelect(program)}>
-                        <CardImg className='' width="100%" src={program.image} alt={program.name} />
-                        <CardImgOverlay>
-                            <CardTitle>{program.name}</CardTitle>
-                        </CardImgOverlay>
-                    </Card> */}
 				</div>
 			);
 		});
@@ -78,3 +72,20 @@ class Programs extends Component {
 }
 
 export default Programs;
+
+// <Card>
+// 	<CardTitle>
+// 		<CardBody>
+// 			{program.name}
+// 			<CardImg
+// 				className=""
+// 				width="100%"
+// 				src={program.image}
+// 				alt={program.name}
+// 			/>
+// 			<CardImgOverlay>
+// 				<CardTitle>{program.name}</CardTitle>
+// 			</CardImgOverlay>
+// 		</CardBody>
+// 	</CardTitle>
+// </Card>;
