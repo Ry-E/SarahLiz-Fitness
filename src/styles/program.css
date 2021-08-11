@@ -19,7 +19,7 @@
 	text-transform: uppercase;
 }
 .card_tab {
-	border-radius: 0.4rem;
+	border-radius: 0.4rem !important;
 }
 
 .card-title {
