@@ -1,6 +1,6 @@
 :root {
 	--theme-font-family: 'Oswald', sans-serif;
-	--main-font-family: '';
+	--main-font-family: 'Open Sans', sans-serif;
 	--alt-font-family: '';
 	--theme-font-color: aquamarine;
 	--main-font-color: white;
@@ -37,6 +37,7 @@
 .selected_card {
 	border-radius: 0 !important;
 	box-shadow: 6px 6px 0px darksalmon;
+	font-family: var(--main-font-family);
 	/* box-shadow: 3px 3px 7px darksalmon; 
     box-shadow: 3px 3px 7px black; */
 }
