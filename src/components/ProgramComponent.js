@@ -15,6 +15,7 @@ class Programs extends Component {
 		super(props);
 		this.state = {
 			selectedProgram: null,
+			programs: PROGRAMS,
 		};
 	}
 
@@ -25,7 +26,7 @@ class Programs extends Component {
 	renderSelectedProgram(program) {
 		if (program) {
 			return (
-				<Card>
+				<Card className="selected_card">
 					<CardImg top src={program.image} alt={program.name} />
 					<CardBody>
 						<CardTitle>{program.name}</CardTitle>
@@ -38,20 +39,15 @@ class Programs extends Component {
 	}
 
 	render() {
-		const program = this.props.programs.map(program => {
+		const program = this.state.programs.map(program => {
 			return (
-				<div key={program.id} className="col-md-5 m-1">
-					<Card onClick={() => this.onProgramSelect(program)}>
+				<div key={program.id} className="col-xs-4 m-1">
+					<Card
+						className="card_tab"
+						onClick={() => this.onProgramSelect(program)}
+					>
 						<CardTitle>
-							<CardBody>
-								{program.name}
-								{/* <CardImg
-									className=""
-									width="100%"
-									src={program.image}
-									alt={program.name}
-								/> */}
-							</CardBody>
+							<CardBody>{program.name}</CardBody>
 						</CardTitle>
 					</Card>
 				</div>
@@ -60,11 +56,10 @@ class Programs extends Component {
 
 		return (
 			<div className="container">
-				<div className="row">{program}</div>
-				<div className="row">
-					<div className="col-md-5 m-1">
-						{this.renderSelectedProgram(this.state.selectedProgram)}
-					</div>
+				<div className="row program_tabs">{program}</div>
+				<div className="row selected_card_container">
+					{/* <div className="col-xs-5 m-1"> */}
+					{this.renderSelectedProgram(this.state.selectedProgram)}
 				</div>
 			</div>
 		);

@@ -26,7 +26,16 @@ function Home() {
 						<button className="apply_button">Start</button>
 					</div>
 				</div>
-				<Programs programs={programs} />
+				<div className="program_container">
+					<h1 className="program_heading">What we can do</h1>
+					<p className="program_info">
+						I use a holistic approach to help reach your goals,
+						being that health uses 3 pillars. We work on your
+						fitness, diet, AND mindset. You need all 3 to be
+						successful in reaching your goals.
+					</p>
+					<Programs programs={programs} />
+				</div>
 			</div>
 		</div>
 	);

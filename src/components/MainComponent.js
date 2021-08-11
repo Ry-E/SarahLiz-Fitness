@@ -6,19 +6,17 @@ import { PROGRAMS } from '../shared/programs';
 import { Switch, Route } from 'react-router-dom';
 
 function Main() {
-	const [programs, setPrograms] = useState(PROGRAMS);
-
 	return (
 		<div className="main">
 			<Switch>
 				<Route exact path="/">
-					<Home programs={programs} />
+					<Home />
 				</Route>
 				<Route path="/about">
 					<About />
 				</Route>
 				<Route path="/programs">
-					<Programs programs={programs} />
+					<Programs />
 				</Route>
 			</Switch>
 		</div>
