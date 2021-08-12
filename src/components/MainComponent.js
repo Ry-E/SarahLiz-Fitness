@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Home from './HomeComponent';
 import Programs from './ProgramComponent';
 import About from './AboutComponent';
-import { PROGRAMS } from '../shared/programs';
 import { Switch, Route } from 'react-router-dom';
 
 function Main() {

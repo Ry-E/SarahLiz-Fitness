@@ -15,11 +15,16 @@
 	font-family: var(--theme-font-family);
 	flex-wrap: nowrap !important;
 	text-align: center;
-	font-size: 1.2rem !important;
+	font-size: 0.9rem !important;
 	text-transform: uppercase;
 }
 .card_tab {
 	border-radius: 0.4rem !important;
+	word-wrap: normal !important;
+}
+
+.highlight {
+	background-color: darksalmon !important;
 }
 
 .card-title {
@@ -36,8 +41,14 @@
 
 .selected_card {
 	border-radius: 0 !important;
+	border: none;
 	box-shadow: 6px 6px 0px darksalmon;
 	font-family: var(--main-font-family);
+	color: black;
 	/* box-shadow: 3px 3px 7px darksalmon; 
     box-shadow: 3px 3px 7px black; */
+}
+
+.selected_card img {
+	border-radius: 0;
 }

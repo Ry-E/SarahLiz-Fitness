@@ -26,10 +26,10 @@ class Programs extends Component {
 	renderSelectedProgram(program) {
 		if (program) {
 			return (
-				<Card className="selected_card">
+				<Card className="selected_card border-0">
 					<CardImg top src={program.image} alt={program.name} />
 					<CardBody>
-						<CardTitle>{program.name}</CardTitle>
+						{/* <CardTitle>{program.name}</CardTitle> */}
 						<CardText>{program.description}</CardText>
 					</CardBody>
 				</Card>
@@ -43,7 +43,11 @@ class Programs extends Component {
 			return (
 				<div key={program.id} className="col-xs-4 m-1">
 					<Card
-						className="card_tab"
+						className={`card_tab border-0 ${
+							this.state.selectedProgram == program
+								? 'highlight'
+								: ''
+						}`}
 						onClick={() => this.onProgramSelect(program)}
 					>
 						<CardTitle>
