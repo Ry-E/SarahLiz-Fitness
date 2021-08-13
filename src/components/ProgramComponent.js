@@ -20,7 +20,13 @@ class Programs extends Component {
 	}
 
 	onProgramSelect(program) {
-		this.setState({ selectedProgram: program });
+		if (this.state.selectedProgram == null) {
+			this.setState({ selectedProgram: program });
+		} else if (this.state.selectedProgram == program) {
+			this.setState({ selectedProgram: null });
+		} else {
+			this.setState({ selectedProgram: program });
+		}
 	}
 
 	renderSelectedProgram(program) {
