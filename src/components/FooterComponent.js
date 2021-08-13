@@ -1,30 +1,24 @@
 import React from 'react';
+import '../styles/footer.css';
 
 function Footer() {
 	return (
 		<div className="footer">
-			<div className="info_container">
-				<div className="info">
-					<ul className="list">
-						<li>B.S. Kinesiology, Michigan State University</li>
-						<li>Certified Personal Trainer</li>
-						<li>Professional Bikini Competitor</li>
-						<li className="experience">Experience: 9+ yrs</li>
-					</ul>
-				</div>
-			</div>
-			<div>
-				<h2>My Links</h2>
-				<div>links</div>
+			<div className="links_container">
+				<h2 className="links_header">My Links</h2>
+				<a href="https://gmail.us20.list-manage.com/subscribe?u=38345a5e43f450dd2589b003d&id=f28cff3b0c">
+					<div className="link">
+						FREE EBOOK! MACRO CHEAT SHEET & NUTRIENT TIMING GUIDE!
+					</div>
+				</a>
+				<a href="https://www.eatlegendary.com/?aff=479">
+					<div className="link">
+						LEGENDARY FOODS DISCOUNT CODE: SARAHLIZ
+					</div>
+				</a>
 			</div>
 			<div>Social</div>
 			<div>Contact</div>
-			<a href="https://www.freepik.com/vectors/people">
-				People vector created by pch.vector - www.freepik.com
-			</a>
-			<a href="https://www.freepik.com/photos/background">
-				Background photo created by freepik - www.freepik.com
-			</a>
 		</div>
 	);
 }

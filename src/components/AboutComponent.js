@@ -4,6 +4,16 @@ function About() {
 	return (
 		<div>
 			<h1>About Me</h1>
+			<div className="info_container">
+				<div className="info">
+					<ul className="list">
+						<li>B.S. Kinesiology, Michigan State University</li>
+						<li>Certified Personal Trainer</li>
+						<li>Professional Bikini Competitor</li>
+						<li className="experience">Experience: 9+ yrs</li>
+					</ul>
+				</div>
+			</div>
 			<p>
 				I believe in creating a lifestyle that works FOR YOU, not
 				forcing yourself into habits that you hate or won’t serve you. I

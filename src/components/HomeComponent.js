@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import portrait from '../assets/images/portrait.jpeg';
+import portrait from '../assets/images/portrait_new.png';
 import Programs from './ProgramComponent';
 import { PROGRAMS } from '../shared/programs';
 import '../styles/home.css';

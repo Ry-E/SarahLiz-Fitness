@@ -37,6 +37,8 @@
 
 .card-text {
 	padding: 10px;
+	margin-bottom: 0 !important;
+	letter-spacing: 0.04rem;
 }
 
 .selected_card_container {
@@ -57,4 +59,18 @@
 	border-radius: 0.4rem !important;
 	border-bottom-right-radius: 0px !important;
 	border-bottom-left-radius: 0px !important;
+}
+
+.card_apply_button {
+	display: flex !important;
+	margin: auto !important;
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
+	color: black !important;
+	background-color: darksalmon !important;
+	padding: 14px 30px !important;
+	border: 0 !important;
+	border-radius: 25px !important;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 20px -7px black;
 }

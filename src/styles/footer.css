@@ -1,0 +1,36 @@
+:root {
+	--theme-font-family: 'Oswald', sans-serif;
+	--main-font-family: 'Open Sans', sans-serif;
+	--alt-font-family: '';
+	--theme-font-color: aquamarine;
+	--secondary-theme-font-color: darksalmon;
+	--main-font-color: white;
+	--alt-font-color: black;
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--main-font-color);
+	margin: 0px 20px;
+}
+
+.links_header {
+	font-family: var(--theme-font-family);
+	color: var(--secondary-theme-font-color);
+	text-align: center;
+}
+.link {
+	font-family: var(--main-font-family);
+	background-color: white !important;
+	padding: 20px;
+	text-align: center;
+	width: 20rem;
+	border-radius: 0.4rem;
+	box-shadow: 3px 3px 7px black;
+	margin-bottom: 10px;
+}
+
+a {
+	color: var(--alt-font-color) !important;
+}
