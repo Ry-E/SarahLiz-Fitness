@@ -17,8 +17,17 @@ function Footer() {
 					</div>
 				</a>
 			</div>
-			<div>Social</div>
-			<div>Contact</div>
+			<div className="main_footer">
+				<div className="social">
+					<h2>Social</h2>
+					<a href="">facebook</a>
+					<a href="">instagram</a>
+				</div>
+				<div className="contact">
+					<h2>Contact</h2>
+					<p>sarahlizfitness@gmail.com</p>
+				</div>
+			</div>
 		</div>
 	);
 }
