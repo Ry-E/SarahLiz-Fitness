@@ -21,7 +21,7 @@
 	flex-wrap: wrap;
 	margin-top: 64px;
 	align-items: center;
-	margin: 64px 10px 0px;
+	margin: 84px 10px 0px;
 }
 
 .headline {
@@ -50,6 +50,7 @@
 	font-size: 25px;
 	color: var(--main-font-color);
 	text-align: center;
+	padding-top: 10px;
 }
 
 li {

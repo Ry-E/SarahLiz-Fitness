@@ -17,9 +17,10 @@
 	text-align: center;
 	font-size: 0.9rem !important;
 	text-transform: uppercase;
+	justify-content: center;
 }
 .card_tab {
-	border-radius: 0.4rem !important;
+	/* border-radius: 20px !important; */
 	word-wrap: normal !important;
 }
 
@@ -55,13 +56,28 @@
 	box-shadow: 3px 3px 7px black;
 }
 
+.online_coaching {
+	margin: -38px 0px -36px 0px;
+	height: auto;
+	width: 100%;
+}
+
+.personal_training {
+	margin: -30px 0px -30px 20px;
+	height: auto;
+	width: 100%;
+}
+
+.npc_bikini_posing {
+	height: auto;
+	width: 100%;
+	margin: 0px 0px -15px 0px;
+}
+
 .selected_card img {
-	border-radius: 0.4rem !important;
+	border-radius: 25px !important;
 	border-bottom-right-radius: 0px !important;
 	border-bottom-left-radius: 0px !important;
-	margin: -40px;
-	align-self: center;
-	height: 18rem;
 }
 
 .card_apply_button {

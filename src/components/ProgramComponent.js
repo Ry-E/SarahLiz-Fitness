@@ -33,7 +33,12 @@ class Programs extends Component {
 		if (program) {
 			return (
 				<Card className="selected_card border-0">
-					<CardImg top src={program.image} alt={program.name} />
+					<CardImg
+						top
+						className={program.class}
+						src={program.image}
+						alt={program.name}
+					/>
 					<CardBody>
 						{/* <CardTitle>{program.name}</CardTitle> */}
 						<CardText>{program.description}</CardText>
