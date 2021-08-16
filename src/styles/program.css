@@ -59,6 +59,9 @@
 	border-radius: 0.4rem !important;
 	border-bottom-right-radius: 0px !important;
 	border-bottom-left-radius: 0px !important;
+	margin: -40px;
+	align-self: center;
+	height: 18rem;
 }
 
 .card_apply_button {

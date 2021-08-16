@@ -1,4 +1,5 @@
 import React from 'react';
+import beach from '../assets/images/beach_flex.jpeg';
 import '../styles/footer.css';
 
 function Footer() {
@@ -17,6 +18,8 @@ function Footer() {
 					</div>
 				</a>
 			</div>
+			<img className="footer_img" src={beach} alt="" />
+			<hr />
 			<div className="main_footer">
 				<div className="social">
 					<h2>Social</h2>
@@ -28,6 +31,9 @@ function Footer() {
 					<p>sarahlizfitness@gmail.com</p>
 				</div>
 			</div>
+			<a href="https://pngtree.com/so/fitness">
+				fitness png from pngtree.com
+			</a>
 		</div>
 	);
 }

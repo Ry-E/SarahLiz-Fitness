@@ -36,19 +36,44 @@ a {
 	color: var(--alt-font-color) !important;
 }
 
+hr {
+	border: 0;
+	width: 92%;
+	background-color: black;
+	height: 1px;
+}
+
+.main_footer a {
+	text-decoration: underline !important;
+}
+
+.footer_img {
+	width: 100%;
+	margin: 40px 0px 20px 0px;
+	padding: 10px;
+	border-radius: 25px;
+}
+
 .main_footer {
 	display: flex;
-	justify-content: space-around;
 	width: 100%;
 	margin: 30px 0px 40px 0px;
+}
+
+.main_footer h2 {
+	font-size: 1.1rem !important;
 }
 
 .social {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	width: 50%;
+	font-size: 0.9rem;
 }
 
 .contact {
 	text-align: center;
+	width: 50%;
+	font-size: 0.9rem;
 }
