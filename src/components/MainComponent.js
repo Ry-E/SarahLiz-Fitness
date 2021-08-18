@@ -3,6 +3,7 @@ import Home from './HomeComponent';
 import About from './AboutComponent';
 import { Switch, Route } from 'react-router-dom';
 import ProgramView from './ProgramViewComponent';
+import '../styles/main.css';
 // import ProgramView from './ProgramViewComponent';
 
 function Main() {

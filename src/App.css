@@ -1,5 +1,15 @@
+:root {
+	--theme-font-family: 'Oswald', sans-serif;
+	--main-font-family: 'Open Sans', sans-serif;
+	--alt-font-family: '';
+	--theme-font-color: aquamarine;
+	--main-font-color: white;
+	--alt-font-color: black;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
+	margin: 0;
 }
 
 .app {

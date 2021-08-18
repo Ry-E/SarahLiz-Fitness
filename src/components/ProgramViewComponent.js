@@ -22,6 +22,7 @@ class ProgramView extends Component {
 		const programView = this.state.programs.map(program => {
 			return (
 				<div key={program.id} className="cards">
+					<CardTitle className="title">{program.name}</CardTitle>
 					<Card>
 						<CardImg
 							top
@@ -30,7 +31,6 @@ class ProgramView extends Component {
 							alt={program.name}
 						/>
 						<CardBody>
-							<CardTitle>{program.name}</CardTitle>
 							<CardText>{program.description}</CardText>
 							<Button className="card_apply_button">Start</Button>
 						</CardBody>
@@ -42,10 +42,7 @@ class ProgramView extends Component {
 		return (
 			<div className="view_container">
 				<div className="program_content">
-					<div>
-						<div>test</div>
-					</div>
-					{/* <div className="program_cards">{programView}</div> */}
+					<div className="cards_container">{programView}</div>
 				</div>
 			</div>
 		);

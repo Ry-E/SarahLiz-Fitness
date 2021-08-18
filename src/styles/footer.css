@@ -1,12 +1,3 @@
-:root {
-	--theme-font-family: 'Oswald', sans-serif;
-	--main-font-family: 'Open Sans', sans-serif;
-	--alt-font-family: '';
-	--theme-font-color: aquamarine;
-	--secondary-theme-font-color: darksalmon;
-	--main-font-color: white;
-	--alt-font-color: black;
-}
 .footer {
 	display: flex;
 	flex-direction: column;

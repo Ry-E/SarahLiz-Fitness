@@ -42,7 +42,11 @@ function Header() {
 					<NavLink to="/" onClick={() => closeMenu()} exact>
 						Home
 					</NavLink>
-					<NavLink to="/programs" onClick={() => closeMenu()} exact>
+					<NavLink
+						to="/programview"
+						onClick={() => closeMenu()}
+						exact
+					>
 						Programs
 					</NavLink>
 					<NavLink to="/about" onClick={() => closeMenu()} exact>

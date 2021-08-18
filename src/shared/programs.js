@@ -19,7 +19,7 @@ export const PROGRAMS = [
 		id: 2,
 		name: 'NPC Bikini Posing',
 		class: 'npc_bikini_posing',
-		image: '/assets/flex_line.png',
+		image: '/assets/flex_vector.png',
 		description:
 			'Learn how to pose or take your posing routine to the next level. You work SO hard on your physique- don’t let all that be wasted by not nailing your routine. Benefits: learn what the judges are looking for, learn which angles & poses work best for YOU, polish and poise your routine, practice & accountability, learn how to walk, learn what to do on stage and during judging, gain confidence to shine on stage, and perfect your entire look from your suit to your hair.',
 	},
