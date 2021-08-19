@@ -10,6 +10,12 @@
 }
 
 .about_header {
+	/* background: linear-gradient(
+		135deg,
+		#000000 0%,
+		aquamarine 50%,
+		darksalmon 100%
+	); */
 	border-radius: 0.4rem;
 	margin-bottom: 2rem !important;
 	color: darksalmon;

@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
+	// const [navbarTransitioning, setNavbarTransitioning] = useState(false);
 
 	const handleToggle = () => {
 		setNavbarOpen(prev => !prev);

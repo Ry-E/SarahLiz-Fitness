@@ -31,6 +31,9 @@
 	font-weight: bold;
 	margin: 10px 0px;
 	z-index: 1000;
+	height: 0px;
+	transition-property: height;
+	transition-duration: 1s;
 }
 
 .navBar a {
@@ -67,10 +70,22 @@ button {
 }
 
 .showMenu .navBar {
+	height: 90px;
 	width: 100%;
-	display: flex;
+	display: block;
 	padding-top: 5px;
-	transition: 2s ease-in-out;
+	/* animation-name: navbar;
+	animation-duration: 500ms;
+	animation-timing-function: ease-in; */
+}
+
+@keyframes navbar {
+	0% {
+		height: 0px;
+	}
+	100% {
+		height: 90px;
+	}
 }
 
 .showMenu button {
@@ -94,10 +109,30 @@ button {
 	text-decoration: none;
 	padding: 0 10px;
 	font-size: 20px;
+	/* animation-name: navbar_a;
+	animation-duration: 1000ms;
+	animation-timing-function: ease-in; */
+}
+
+@keyframes navbar_a {
+	0% {
+		height: 0px;
+		opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		height: 90px;
+		opacity: 1;
+	}
 }
 
 @media only screen and (min-device-width: 500px) {
-	.header {
+	/* .header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -136,5 +171,5 @@ button {
 	.navBar a:hover {
 		text-decoration: none;
 		color: #89a5dd;
-	}
+	} */
 }
