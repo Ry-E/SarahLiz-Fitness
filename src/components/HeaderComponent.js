@@ -43,17 +43,28 @@ function Header() {
 				style={{ display: navbarOpen ? 'block' : 'none' }}
 			>
 				<ul className="menuNav">
-					<NavLink to="/" onClick={() => closeMenu()} exact>
+					<NavLink
+						id="navlink"
+						to="/"
+						onClick={() => closeMenu()}
+						exact
+					>
 						Home
 					</NavLink>
 					<NavLink
+						id="navlink"
 						to="/programview"
 						onClick={() => closeMenu()}
 						exact
 					>
 						Programs
 					</NavLink>
-					<NavLink to="/about" onClick={() => closeMenu()} exact>
+					<NavLink
+						id="navlink"
+						to="/about"
+						onClick={() => closeMenu()}
+						exact
+					>
 						About
 					</NavLink>
 				</ul>
