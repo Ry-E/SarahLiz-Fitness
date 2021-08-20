@@ -17,7 +17,7 @@ function Header() {
 	};
 
 	return (
-		<div className={`header ${navbarOpen ? 'showMenu' : ''}`}>
+		<div className="header">
 			<h1 className="company">SarahLiz Fitness</h1>
 			<button onClick={handleToggle}>
 				{navbarOpen ? (
@@ -38,7 +38,10 @@ function Header() {
 					/>
 				)}
 			</button>
-			<nav className="navBar">
+			<nav
+				className="navBar"
+				style={{ display: navbarOpen ? 'block' : 'none' }}
+			>
 				<ul className="menuNav">
 					<NavLink to="/" onClick={() => closeMenu()} exact>
 						Home

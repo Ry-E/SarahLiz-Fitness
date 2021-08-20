@@ -2,7 +2,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 64px;
 	padding: 10px 12px 10px 12px;
 	position: fixed;
 	top: 0;
@@ -10,6 +9,7 @@
 	right: 0;
 	background-color: black;
 	z-index: 1;
+	flex-wrap: wrap;
 }
 
 .header * {
@@ -27,13 +27,14 @@
 }
 
 .navBar {
-	display: none;
 	font-weight: bold;
 	margin: 10px 0px;
 	z-index: 1000;
-	height: 0px;
+	height: 90px;
+	width: 100%;
 	transition-property: height;
 	transition-duration: 1s;
+	background-color: black;
 }
 
 .navBar a {
@@ -45,8 +46,12 @@
 }
 
 .menuNav {
-	display: none;
+	flex-direction: column;
+	display: flex;
+	background-color: black;
+	width: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 button {
@@ -69,15 +74,15 @@ button {
 	flex-wrap: wrap;
 }
 
-.showMenu .navBar {
+/* .showMenu .navBar {
 	height: 90px;
 	width: 100%;
 	display: block;
 	padding-top: 5px;
 	/* animation-name: navbar;
 	animation-duration: 500ms;
-	animation-timing-function: ease-in; */
-}
+	animation-timing-function: ease-in; 
+} */
 
 @keyframes navbar {
 	0% {
@@ -88,31 +93,31 @@ button {
 	}
 }
 
-.showMenu button {
+/* .showMenu button {
 	background: transparent;
 	border: none;
 }
 
 .showMenu button:focus {
 	outline: none;
-}
+} */
 
-.showMenu .menuNav {
+/* .showMenu .menuNav {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	text-align: right;
-}
+} */
 
-.showMenu a {
+/* .showMenu a {
 	color: white;
 	text-decoration: none;
 	padding: 0 10px;
 	font-size: 20px;
 	/* animation-name: navbar_a;
 	animation-duration: 1000ms;
-	animation-timing-function: ease-in; */
-}
+	animation-timing-function: ease-in; 
+} */
 
 @keyframes navbar_a {
 	0% {
