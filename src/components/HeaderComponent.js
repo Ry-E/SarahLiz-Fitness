@@ -38,10 +38,7 @@ function Header() {
 					/>
 				)}
 			</button>
-			<nav
-				className="navBar"
-				style={{ display: navbarOpen ? 'block' : 'none' }}
-			>
+			<nav className={`navBar ${navbarOpen ? 'down' : ''}`}>
 				<ul className="menuNav">
 					<NavLink
 						id="navlink"
@@ -74,6 +71,8 @@ function Header() {
 }
 
 export default Header;
+
+// style={{ opacity: navbarOpen ? '1' : '0' }}
 
 // constructor(props) {
 // 		super(props);

@@ -26,31 +26,35 @@
 }
 
 .navBar {
+	display: block;
+	height: auto;
 	font-weight: bold;
-	margin: 10px 0px;
 	z-index: 1000;
-	height: 90px;
 	width: 100%;
-	transition-property: height;
-	transition-duration: 1s;
-	background-color: black;
+	overflow: hidden;
 }
 
 .navBar a {
 	color: var(--main-font-color) !important;
 	text-decoration: none !important;
-	padding: 0 10px;
-	font-size: 20px;
+	font-size: 16px;
 	text-transform: uppercase;
+	width: fit-content;
 }
 
 .menuNav {
+	height: 0;
 	flex-direction: column;
 	display: flex;
 	background-color: black;
 	width: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 5px 0px;
+	transition: height 0.5s ease-in-out;
+}
+
+.down .menuNav {
+	height: 80px;
 }
 
 button {
@@ -64,58 +68,6 @@ button {
 
 #navlink:hover {
 	color: darksalmon !important;
-}
-
-@keyframes navbar {
-	0% {
-		height: 0px;
-	}
-	100% {
-		height: 90px;
-	}
-}
-
-/* .showMenu button {
-	background: transparent;
-	border: none;
-}
-
-.showMenu button:focus {
-	outline: none;
-} */
-
-/* .showMenu .menuNav {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-} */
-
-/* .showMenu a {
-	color: white;
-	text-decoration: none;
-	padding: 0 10px;
-	font-size: 20px;
-	/* animation-name: navbar_a;
-	animation-duration: 1000ms;
-	animation-timing-function: ease-in; 
-} */
-
-@keyframes navbar_a {
-	0% {
-		height: 0px;
-		opacity: 0;
-	}
-	10% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		height: 90px;
-		opacity: 1;
-	}
 }
 
 @media only screen and (min-device-width: 500px) {
