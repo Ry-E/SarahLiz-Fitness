@@ -5,6 +5,7 @@ import '../styles/footer.css';
 function Footer() {
 	return (
 		<div className="footer">
+			<img className="footer_img" src={beach} alt="" />
 			<div className="links_container">
 				<h2 className="links_header">My Links</h2>
 				<a href="https://gmail.us20.list-manage.com/subscribe?u=38345a5e43f450dd2589b003d&id=f28cff3b0c">
@@ -18,7 +19,7 @@ function Footer() {
 					</div>
 				</a>
 			</div>
-			<img className="footer_img" src={beach} alt="" />
+
 			<hr />
 			<div className="main_footer">
 				<div className="social">

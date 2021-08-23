@@ -56,10 +56,11 @@ li {
 	margin-bottom: 20px;
 	border-radius: 25px;
 	text-transform: uppercase;
+	box-shadow: 0px 0px 20px -12px aquamarine;
 }
 
 .program_container {
-	margin: 60px 20px;
+	margin: 60px 20px 14px;
 }
 
 .program_heading {

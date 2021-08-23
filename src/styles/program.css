@@ -9,10 +9,16 @@
 	font-size: 0.9rem !important;
 	text-transform: uppercase;
 	justify-content: center;
+	padding-bottom: 1rem;
 }
 .card_tab {
 	/* border-radius: 20px !important; */
 	word-wrap: normal !important;
+}
+
+.card_tab:hover {
+	background-color: darksalmon;
+	cursor: pointer;
 }
 
 .highlight {
@@ -33,17 +39,11 @@
 	letter-spacing: 0.04rem;
 }
 
-.selected_card_container {
-	padding-top: 1rem;
-}
-
 .selected_card {
-	/* border-radius: 0 !important; */
+	margin-bottom: 35px;
 	border: none;
-	/* box-shadow: 6px 6px 0px darksalmon; */
 	font-family: var(--main-font-family);
 	color: black;
-	/* box-shadow: 3px 3px 7px darksalmon;  */
 	box-shadow: 3px 3px 7px black;
 }
 
