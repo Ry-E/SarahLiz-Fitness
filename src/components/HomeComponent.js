@@ -7,11 +7,11 @@ import '../styles/home.css';
 
 function Home() {
 	const [programs] = useState(PROGRAMS);
-	// const [modalOpen, setModalOpen] = useState(false);
+	const [modalOpen, setModalOpen] = useState(false);
 
-	// const openModal = () => {
-	// 	setModalOpen(true);
-	// };
+	const openModal = () => {
+		setModalOpen(true);
+	};
 
 	return (
 		<div className="home">
@@ -36,7 +36,7 @@ function Home() {
 						>
 							Start
 						</button>
-						{/* <Application modalOpen={modalOpen} /> */}
+						<Application modalOpen={modalOpen} />
 					</div>
 				</div>
 				<div className="program_container">

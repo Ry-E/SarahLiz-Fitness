@@ -1,4 +1,4 @@
-/* #overlay {
+#overlay {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -30,4 +30,4 @@
 	color: grey;
 	text-decoration: none;
 	cursor: pointer;
-} */
+}
