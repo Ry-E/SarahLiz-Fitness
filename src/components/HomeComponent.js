@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import portrait from '../assets/images/portrait_new.png';
 import Programs from './ProgramComponent';
+import Application from './ApplicationComponent';
 import { PROGRAMS } from '../shared/programs';
 import '../styles/home.css';
 
 function Home() {
-	const [programs, setPrograms] = useState(PROGRAMS);
+	const [programs] = useState(PROGRAMS);
+	// const [modalOpen, setModalOpen] = useState(false);
+
+	// const openModal = () => {
+	// 	setModalOpen(true);
+	// };
+
 	return (
 		<div className="home">
 			<div className="home_content">
@@ -23,7 +30,13 @@ function Home() {
 							Online Health Coach &#9900; Personal Trainer &#9900;
 							NPC Posing Coach
 						</h2>
-						<button className="apply_button">Start</button>
+						<button
+							className="apply_button"
+							// onClick={() => openModal()}
+						>
+							Start
+						</button>
+						{/* <Application modalOpen={modalOpen} /> */}
 					</div>
 				</div>
 				<div className="program_container">
