@@ -4,7 +4,6 @@ import Programs from './ProgramComponent';
 import Modal from './ModalComponent';
 import Form from './FormComponent';
 import '../styles/home.css';
-import ModalBody from 'reactstrap/lib/ModalBody';
 
 function Home() {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -46,7 +45,7 @@ function Home() {
 						fitness, diet, AND mindset. You need all 3 to be
 						successful in reaching your goals.
 					</p>
-					<Programs />
+					<Programs toggleModal={toggleModal} />
 				</div>
 			</div>
 		</div>

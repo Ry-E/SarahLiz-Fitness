@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Modal from './ModalComponent';
+import Form from './FormComponent';
 import { PROGRAMS } from '../shared/programs';
 import '../styles/programView.css';
 import {
@@ -15,10 +17,21 @@ class ProgramView extends Component {
 		super(props);
 		this.state = {
 			programs: PROGRAMS,
+			modalOpen: false,
 		};
 	}
 
 	render() {
+		// Modal state toggles on button click
+		const openModal = () => {
+			this.setState({ modalOpen: true });
+		};
+
+		const closeModal = () => {
+			this.setState({ modalOpen: false });
+		};
+
+		// Displays all programs stored in PROGRAMS array
 		const programView = this.state.programs.map(program => {
 			return (
 				<div key={program.id} className="cards">
@@ -32,7 +45,12 @@ class ProgramView extends Component {
 						/>
 						<CardBody>
 							<CardText>{program.description}</CardText>
-							<Button className="card_apply_button">Start</Button>
+							<Button
+								className="card_apply_button"
+								onClick={openModal}
+							>
+								Start
+							</Button>
 						</CardBody>
 					</Card>
 				</div>
@@ -44,6 +62,9 @@ class ProgramView extends Component {
 				<div className="program_content">
 					<div className="cards_container">{programView}</div>
 				</div>
+				<Modal onClose={closeModal} modalOpen={this.state.modalOpen}>
+					<Form />
+				</Modal>
 			</div>
 		);
 	}

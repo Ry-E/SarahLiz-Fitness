@@ -3,7 +3,7 @@ import '../styles/modal.css';
 
 function Modal(props) {
 	const closeModal = e => {
-		props.onClose(e);
+		props.onClose && props.onClose(e);
 	};
 
 	if (!props.modalOpen) {
