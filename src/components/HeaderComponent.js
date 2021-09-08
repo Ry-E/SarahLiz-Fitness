@@ -6,15 +6,14 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
-	// const [navbarTransitioning, setNavbarTransitioning] = useState(false);
 
 	const handleToggle = () => {
 		setNavbarOpen(prev => !prev);
 	};
 
-	const closeMenu = () => {
-		setNavbarOpen(false);
-	};
+	// const closeMenu = () => {
+	// 	setNavbarOpen(false);
+	// };
 
 	return (
 		<div className="header">
@@ -40,18 +39,13 @@ function Header() {
 			</button>
 			<nav className={`navBar ${navbarOpen ? 'down' : ''}`}>
 				<ul className="menuNav">
-					<NavLink
-						id="navlink"
-						to="/"
-						onClick={() => closeMenu()}
-						exact
-					>
+					<NavLink id="navlink" to="/" onClick={handleToggle} exact>
 						Home
 					</NavLink>
 					<NavLink
 						id="navlink"
 						to="/programview"
-						onClick={() => closeMenu()}
+						onClick={handleToggle}
 						exact
 					>
 						Programs
@@ -59,7 +53,7 @@ function Header() {
 					<NavLink
 						id="navlink"
 						to="/about"
-						onClick={() => closeMenu()}
+						onClick={handleToggle}
 						exact
 					>
 						About

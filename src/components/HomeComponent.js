@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import portrait from '../assets/images/portrait_new.png';
 import Programs from './ProgramComponent';
-import Application from './ApplicationComponent';
-import { PROGRAMS } from '../shared/programs';
+import Modal from './ModalComponent';
+import Form from './FormComponent';
 import '../styles/home.css';
+import ModalBody from 'reactstrap/lib/ModalBody';
 
 function Home() {
-	const [programs] = useState(PROGRAMS);
 	const [modalOpen, setModalOpen] = useState(false);
 
-	const openModal = () => {
-		setModalOpen(true);
+	const toggleModal = () => {
+		setModalOpen(prev => !prev);
 	};
 
 	return (
@@ -30,13 +30,12 @@ function Home() {
 							Online Health Coach &#9900; Personal Trainer &#9900;
 							NPC Posing Coach
 						</h2>
-						<button
-							className="apply_button"
-							// onClick={() => openModal()}
-						>
+						<button className="apply_button" onClick={toggleModal}>
 							Start
 						</button>
-						<Application modalOpen={modalOpen} />
+						<Modal onClose={toggleModal} modalOpen={modalOpen}>
+							<Form />
+						</Modal>
 					</div>
 				</div>
 				<div className="program_container">
@@ -47,7 +46,7 @@ function Home() {
 						fitness, diet, AND mindset. You need all 3 to be
 						successful in reaching your goals.
 					</p>
-					<Programs programs={programs} />
+					<Programs />
 				</div>
 			</div>
 		</div>
