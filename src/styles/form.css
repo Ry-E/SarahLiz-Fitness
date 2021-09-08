@@ -1,0 +1,73 @@
+form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+label {
+	font-weight: bold;
+}
+
+p {
+	font-weight: bold;
+}
+
+form div {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+}
+
+#programSelection {
+	flex-direction: column;
+
+	padding: 0;
+}
+
+#programSelection div {
+	flex-direction: row;
+	padding: 0;
+	align-items: baseline;
+}
+
+#programSelection label {
+	padding: 0 5px;
+	font-weight: normal;
+}
+
+.goalInputs {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	padding: 0;
+}
+
+.goalInputs label {
+	padding: 0 5px;
+	font-weight: normal;
+}
+
+#goals {
+	padding-bottom: 5px;
+}
+
+.readyInputs {
+	padding: 0;
+	flex-direction: row;
+
+	justify-content: space-evenly;
+}
+
+.radios {
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.radios label {
+	padding: 0 5px;
+	font-weight: normal;
+}
