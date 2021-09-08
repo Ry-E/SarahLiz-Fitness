@@ -42,7 +42,12 @@ class Programs extends Component {
 					<CardBody>
 						{/* <CardTitle>{program.name}</CardTitle> */}
 						<CardText>{program.description}</CardText>
-						<Button className="card_apply_button">Start</Button>
+						<Button
+							className="card_apply_button"
+							onClick={this.props.toggleModal}
+						>
+							Start
+						</Button>
 					</CardBody>
 				</Card>
 			);
