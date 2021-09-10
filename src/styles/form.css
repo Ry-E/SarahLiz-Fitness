@@ -8,11 +8,21 @@ h1 {
 	text-align: center;
 }
 
-label {
+form ul {
+	list-style: none;
+}
+
+form legend,
+p {
+	font-size: 1rem;
 	font-weight: bold;
 }
 
-p {
+form label {
+	font-weight: bold;
+}
+
+form p {
 	font-weight: bold;
 }
 
@@ -55,11 +65,12 @@ form div {
 	padding-bottom: 5px;
 }
 
+.goalsList {
+	padding: 0;
+}
+
 .readyInputs {
 	padding: 0;
-	flex-direction: row;
-
-	justify-content: space-evenly;
 }
 
 .radios {
