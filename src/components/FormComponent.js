@@ -41,9 +41,8 @@ function Form() {
 							type="text"
 							id="name"
 							name="user_name"
-							placeholder="Name"
 							// required
-							value="Joe Shmoe"
+							placeholder="Joe Shmoe"
 						></input>
 					</div>
 
@@ -53,9 +52,8 @@ function Form() {
 							type="email"
 							id="mail"
 							name="user_email"
-							placeholder="E-mail"
+							placeholder="user@example.com"
 							// required
-							value="joe@shmoe.com"
 						></input>
 					</div>
 
