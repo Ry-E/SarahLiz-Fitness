@@ -2,9 +2,37 @@ import React from 'react';
 import '../styles/form.css';
 
 function Form() {
+	let handleSubmit = event => {
+		const form = document.getElementById('myForm');
+		event.preventDefault();
+		sendData();
+
+		function sendData() {
+			console.log('Attempting to send data');
+			const XHR = new XMLHttpRequest();
+
+			const FD = new FormData(form);
+
+			XHR.addEventListener('load', function (event) {
+				console.log(event.target.responseText);
+			});
+
+			XHR.addEventListener('error', function (event) {
+				alert('Oops! Something went wrong.');
+			});
+
+			XHR.open('POST', 'http://localhost:3001');
+
+			//Sending the user provided form data
+			XHR.send(FD);
+
+			console.log('Sent data');
+		}
+	};
+
 	return (
 		<div className="application">
-			<form action="http://localhost:3001" method="POST">
+			<form id="myForm" onSubmit={handleSubmit}>
 				<h1> Application </h1>
 				<section>
 					<div>
@@ -14,7 +42,8 @@ function Form() {
 							id="name"
 							name="user_name"
 							placeholder="Name"
-							required
+							// required
+							value="Joe Shmoe"
 						></input>
 					</div>
 
@@ -25,7 +54,8 @@ function Form() {
 							id="mail"
 							name="user_email"
 							placeholder="E-mail"
-							required
+							// required
+							value="joe@shmoe.com"
 						></input>
 					</div>
 
@@ -49,7 +79,7 @@ function Form() {
 									id="online_coaching"
 									name="program"
 									value="online coaching"
-									required
+									// required
 								/>
 								<label htmlFor="online_coaching">
 									Online Coaching
