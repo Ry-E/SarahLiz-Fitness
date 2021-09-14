@@ -292,7 +292,7 @@ function Form() {
 				</section>
 				<section>
 					<div>
-						<input type="submit" value="submit" />
+						<input type="submit" value="SUBMIT" />
 					</div>
 				</section>
 			</form>
