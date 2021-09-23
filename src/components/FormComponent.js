@@ -21,7 +21,7 @@ function Form() {
 				alert('Oops! Something went wrong.');
 			});
 
-			XHR.open('POST', 'http://localhost:3001');
+			XHR.open('POST', 'http://localhost:3001/api');
 
 			//Sending the user provided form data
 			XHR.send(FD);
