@@ -8,11 +8,7 @@ function About() {
 			<div className="about_content">
 				<h1 className="about_header">About Me</h1>
 				<div className="qualifications">
-					<img
-						className="leaves"
-						src={leaves}
-						alt="A friendly looking trainer"
-					/>
+					<img className="leaves" src={leaves} alt="" />
 					<ul className="list">
 						<li>B.S. Kinesiology, Michigan State University</li>
 						<li>Certified Personal Trainer</li>

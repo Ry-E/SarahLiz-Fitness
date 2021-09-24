@@ -20,12 +20,6 @@ form ul {
 	list-style: none;
 }
 
-form legend,
-p {
-	font-size: 1rem;
-	font-weight: bold;
-}
-
 form label {
 	font-weight: bold;
 }

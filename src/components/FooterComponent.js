@@ -5,7 +5,6 @@ import '../styles/footer.css';
 function Footer() {
 	return (
 		<div className="footer">
-			<img className="footer_img" src={beach} alt="" />
 			<div className="links_container">
 				<h2 className="links_header">My Links</h2>
 				<a href="https://gmail.us20.list-manage.com/subscribe?u=38345a5e43f450dd2589b003d&id=f28cff3b0c">
@@ -35,6 +34,7 @@ function Footer() {
 			<a href="https://pngtree.com/so/fitness">
 				fitness png from pngtree.com
 			</a>
+			<img className="footer_img" src={beach} alt="" />
 		</div>
 	);
 }

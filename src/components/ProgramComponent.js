@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { PROGRAMS } from '../shared/programs';
 import '../styles/program.css';
 import {
@@ -37,7 +38,7 @@ class Programs extends Component {
 						top
 						className={program.class}
 						src={program.image}
-						alt={program.name}
+						alt=""
 					/>
 					<CardBody>
 						{/* <CardTitle>{program.name}</CardTitle> */}

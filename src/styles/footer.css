@@ -29,7 +29,7 @@ a {
 
 hr {
 	border: 0;
-	width: 100%;
+	width: 60%;
 	background-color: black;
 	height: 1px;
 }
@@ -39,7 +39,8 @@ hr {
 }
 
 .footer_img {
-	width: 100%;
+	max-width: 100%;
+	height: auto;
 	margin-bottom: 20px;
 	border-radius: 0.4rem;
 }

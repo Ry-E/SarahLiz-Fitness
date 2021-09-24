@@ -5,12 +5,13 @@
 	background-size: cover;
 	background-position: right;
 	height: 100vh;
+	justify-content: center;
 }
 
 .landing_content {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+	flex-direction: column;
+	/* align-items: center; */
 	margin: 84px 10px 0px;
 }
 
@@ -29,7 +30,8 @@
 
 .portrait {
 	border-radius: 50%;
-	width: 320px;
+	max-width: 100%;
+	height: auto;
 	display: block;
 	margin: auto;
 	box-shadow: 0px 30px 20px -25px black;
@@ -60,7 +62,7 @@ li {
 }
 
 .program_container {
-	margin: 60px 20px 14px;
+	margin: 3rem 1rem 2rem;
 }
 
 .program_heading {
@@ -75,41 +77,29 @@ li {
 .program_info {
 	color: var(--main-font-color);
 	font-family: var(--main-font-family);
-	font-size: 16px !important;
-	font-weight: 400 !important;
-	line-height: 28px !important;
-	margin: 0;
+	font-weight: 400;
+	line-height: 28px;
 }
 
-@media only screen and (min-device-width: 500px) {
-	/* .home {
-		background-image: url('../assets/images/squat.jpeg');
-		background-color: black;
-		background-size: cover;
-		background-position: center center;
-		display: flex;
-		height: 100vh;
-		align-items: center;
-		color: var(--alt-font-color);
+@media only screen and (min-device-width: 600px) {
+	.program_container {
+		margin: 3rem 1rem 2rem;
+		padding: 20px 34px;
 	}
-
-	.home_landing {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		margin: 0px 60px 0px 300px;
+	.program_info {
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 5rem;
 	}
+}
 
-	.portrait {
-		border-radius: 10%;
-		width: 500px;
-		margin-right: auto;
-		display: block;
-		margin-left: auto;
-		box-shadow: 3px 3px 7px rgb(88, 88, 88);
+@media only screen and (min-device-width: 1200px) {
+	.program_container {
+		margin: 3rem 15rem;
+		padding: 20px 34px;
 	}
-
-	.headline {
-		padding-top: 15px;
-	} */
+	.program_info {
+		margin: 0 auto;
+		text-align: center;
+	}
 }

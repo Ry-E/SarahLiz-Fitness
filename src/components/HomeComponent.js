@@ -23,7 +23,7 @@ function Home() {
 						<img
 							className="portrait"
 							src={portrait}
-							alt="A friendly looking trainer"
+							alt="Sarah with a big smile, looking ready to workout"
 						/>
 						<h2 className="services">
 							Online Health Coach &#9900; Personal Trainer &#9900;

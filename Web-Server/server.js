@@ -26,24 +26,6 @@ const staticServe = function (req, res) {
 	let myNextPath =
 		'/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build/index.html';
 
-	// fs.readdir(myPath, 'utf8', function (err, data) {
-	// 	// fs.readFile(__dirname + req.url, function (err, files) {
-	// 	console.log('data: ' + data);
-
-	// 	if (err) {
-	// 		// console.log('__dirname + req.url:' + __dirname + req.url);
-	// 		res.writeHead(404, 'Not Found');
-	// 		res.end(JSON.stringify(err));
-	// 		return;
-	// 	} else {
-	// 		res.writeHead(200, {
-	// 			'Content-Type': 'application/json',
-	// 		});
-
-	// 		// res.write(JSON.stringify(data));
-	// 		res.end(data);
-	// 	}
-	// });
 	if (req.url === '/' && req.method.toLowerCase() === 'get') {
 		// file.serve(req, res);
 		//Restrict the path to only return files in the given directory
@@ -58,10 +40,8 @@ const staticServe = function (req, res) {
 
 		fs.readFile(myNextPath, 'utf8', function (err, data) {
 			// fs.readFile(__dirname + req.url, function (err, files) {
-			// console.log('data: ' + data);
 
 			if (err) {
-				// console.log('__dirname + req.url:' + __dirname + req.url);
 				res.writeHead(404, 'Not Found');
 				res.end(JSON.stringify(err));
 				return;
@@ -69,8 +49,6 @@ const staticServe = function (req, res) {
 				res.writeHead(200, {
 					'Content-Type': 'text/html',
 				});
-
-				// res.write(JSON.stringify(data));
 				res.end(data);
 			}
 		});
@@ -162,14 +140,10 @@ const staticServe = function (req, res) {
 			});
 		});
 
-		//response headers
 		res.writeHead(200, {
 			'Content-Type': 'text/plain',
 			'Access-Control-Allow-Origin': 'http://localhost:3000',
 		});
-		//set the response
-		// res.write();
-		//end the response
 		res.end('Thanks, your application was successfully sent!');
 	}
 
@@ -183,5 +157,5 @@ const staticServe = function (req, res) {
 const server = http.createServer(staticServe);
 
 server.listen(port, () => {
-	console.log(`Server running at http://localhost:${port}/` + __dirname);
+	console.log(`Server running at https://localhost:${port}/`);
 });
