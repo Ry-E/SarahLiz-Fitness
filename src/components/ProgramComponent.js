@@ -61,7 +61,7 @@ class Programs extends Component {
 			return (
 				<div key={program.id} className="col-xs-4 m-1">
 					<Card
-						className={`card_tab border-0 ${
+						className={`card_tab ${
 							this.state.selectedProgram == program
 								? 'highlight'
 								: ''
