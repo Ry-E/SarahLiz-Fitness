@@ -61,8 +61,8 @@
 }
 
 .navBar a {
-	color: var(--main-font-color) !important;
-	text-decoration: none !important;
+	color: var(--main-font-color);
+	text-decoration: none;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	width: fit-content;
@@ -106,6 +106,10 @@
 	z-index: 10000;
 }
 
+.hamburger:focus {
+	outline: none;
+}
+
 .header > .hamburger {
 	background-color: black;
 	border-radius: 0.4rem;
@@ -116,11 +120,16 @@
 }
 
 #navlink:hover {
-	color: darksalmon !important;
+	color: aquamarine;
+	text-decoration: none;
 }
 
 @media only screen and (min-device-width: 500px) {
 	.header {
+		padding: 0.2rem 2rem;
+	}
+
+	.fixed_nav {
 		padding: 0.2rem 2rem;
 	}
 }

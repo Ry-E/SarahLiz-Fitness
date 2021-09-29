@@ -6,21 +6,17 @@ import Modal from './ModalComponent';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
-	const [navbarOpen, setNavbarOpen] = useState(false);
-
 	const [modalOpen, setModalOpen] = useState(false);
 
 	const toggleModal = () => {
 		setModalOpen(prev => !prev);
 	};
 
-	const handleToggle = () => {
-		setNavbarOpen(prev => !prev);
+	let style = {
+		button: {
+			display: 'none',
+		},
 	};
-
-	// const closeMenu = () => {
-	// 	setNavbarOpen(false);
-	// };
 
 	window.onscroll = function () {
 		scrollNav();
@@ -64,12 +60,16 @@ function Header() {
 				SarahLiz Fitness
 			</NavLink>
 			<nav className="navBar">
-				<Modal onClose={toggleModal} modalOpen={modalOpen}>
+				<Modal
+					onClose={toggleModal}
+					modalOpen={modalOpen}
+					style={style.button}
+				>
 					<ul className={`menuNav ${modalOpen ? 'shown' : 'hidden'}`}>
 						<NavLink
 							id="navlink"
 							to="/"
-							onClick={handleToggle}
+							onClick={toggleModal}
 							exact
 						>
 							Home
@@ -77,7 +77,7 @@ function Header() {
 						<NavLink
 							id="navlink"
 							to="/programview"
-							onClick={handleToggle}
+							onClick={toggleModal}
 							exact
 						>
 							Programs
@@ -85,7 +85,7 @@ function Header() {
 						<NavLink
 							id="navlink"
 							to="/about"
-							onClick={handleToggle}
+							onClick={toggleModal}
 							exact
 						>
 							About

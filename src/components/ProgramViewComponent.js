@@ -60,6 +60,7 @@ class ProgramView extends Component {
 		return (
 			<div className="view_container">
 				<div className="program_content">
+					<h1 className="programs_heading">Programs</h1>
 					<div className="cards_container">{programView}</div>
 				</div>
 				<Modal onClose={closeModal} modalOpen={this.state.modalOpen}>

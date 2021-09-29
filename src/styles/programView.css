@@ -3,7 +3,15 @@
 }
 
 .program_content {
-	margin: 84px 15px 50px 15px;
+	margin: 0 15px;
+	padding: 60px 0px 50px;
+}
+
+.programs_heading {
+	color: var(--secondary-theme-font-color);
+	font-family: var(--theme-font-family);
+	margin: 0;
+	font-size: 150%;
 }
 
 .cards {
@@ -11,7 +19,7 @@
 }
 
 .card-body {
-	padding: 0.5rem !important;
+	padding: 0.5rem;
 }
 
 .title {
@@ -25,7 +33,7 @@
 .card-text {
 	font-family: var(--main-font-family);
 	padding: 10px;
-	margin-bottom: 0 !important;
+	margin-bottom: 0;
 	letter-spacing: 0.04rem;
 }
 

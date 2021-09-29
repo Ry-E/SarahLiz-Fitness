@@ -14,7 +14,11 @@ function Modal(props) {
 			<div>
 				<div id="overlay">
 					<div id="modal">
-						<button className="close" onClick={closeModal}>
+						<button
+							className="close"
+							onClick={closeModal}
+							style={props.style}
+						>
 							&times;
 						</button>
 						<div>{props.children}</div>
