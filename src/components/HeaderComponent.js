@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 import '../styles/header.css';
+import Modal from './ModalComponent';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
+
+	const [modalOpen, setModalOpen] = useState(false);
+
+	const toggleModal = () => {
+		setModalOpen(prev => !prev);
+	};
 
 	const handleToggle = () => {
 		setNavbarOpen(prev => !prev);
@@ -15,13 +22,28 @@ function Header() {
 	// 	setNavbarOpen(false);
 	// };
 
+	window.onscroll = function () {
+		scrollNav();
+	};
+
+	function scrollNav() {
+		if (
+			document.body.scrollTop > window.innerHeight ||
+			document.documentElement.scrollTop > window.innerHeight
+		) {
+			document.getElementById('header').className = 'header';
+		} else {
+			document.getElementById('header').className = 'fixed_nav';
+		}
+	}
+
 	return (
-		<div className="header">
-			<h1 className="company">SarahLiz Fitness</h1>
-			<button onClick={handleToggle}>
-				{navbarOpen ? (
+		<div className="fixed_nav" id="header">
+			<button className="hamburger" onClick={toggleModal}>
+				{modalOpen ? (
 					<MdClose
 						style={{
+							padding: '0',
 							color: 'white',
 							width: '40px',
 							height: '40px',
@@ -30,6 +52,7 @@ function Header() {
 				) : (
 					<FiMenu
 						style={{
+							padding: '0',
 							color: 'white',
 							width: '40px',
 							height: '40px',
@@ -37,28 +60,38 @@ function Header() {
 					/>
 				)}
 			</button>
-			<nav className={`navBar ${navbarOpen ? 'down' : ''}`}>
-				<ul className="menuNav">
-					<NavLink id="navlink" to="/" onClick={handleToggle} exact>
-						Home
-					</NavLink>
-					<NavLink
-						id="navlink"
-						to="/programview"
-						onClick={handleToggle}
-						exact
-					>
-						Programs
-					</NavLink>
-					<NavLink
-						id="navlink"
-						to="/about"
-						onClick={handleToggle}
-						exact
-					>
-						About
-					</NavLink>
-				</ul>
+			<NavLink className="company" to="/" exact>
+				SarahLiz Fitness
+			</NavLink>
+			<nav className="navBar">
+				<Modal onClose={toggleModal} modalOpen={modalOpen}>
+					<ul className={`menuNav ${modalOpen ? 'shown' : 'hidden'}`}>
+						<NavLink
+							id="navlink"
+							to="/"
+							onClick={handleToggle}
+							exact
+						>
+							Home
+						</NavLink>
+						<NavLink
+							id="navlink"
+							to="/programview"
+							onClick={handleToggle}
+							exact
+						>
+							Programs
+						</NavLink>
+						<NavLink
+							id="navlink"
+							to="/about"
+							onClick={handleToggle}
+							exact
+						>
+							About
+						</NavLink>
+					</ul>
+				</Modal>
 			</nav>
 		</div>
 	);

@@ -1,28 +1,54 @@
-.header {
+.fixed_nav {
 	display: flex;
+	/* display: none; */
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 12px 10px 12px;
-	position: fixed;
+	padding: 0.2rem 0.6rem;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: black;
 	z-index: 1;
 	flex-wrap: wrap;
 }
 
-.header * {
+/* .header,
+.fixed_nav * {
 	font-size: 20px;
+} */
+
+.header {
+	display: flex;
+	/* display: none; */
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.2rem 0.6rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	flex-wrap: wrap;
 }
 
 .company {
 	font-family: 'Oswald', sans-serif;
+	font-size: 1rem;
 	letter-spacing: 1px;
 	align-items: center;
 	font-weight: bold;
-	color: aquamarine;
+	color: var(--main-font-color);
 	margin: 0;
+	z-index: 10000;
+}
+
+.header > .company {
+	display: none;
+}
+
+.company:hover {
+	text-decoration: none;
+	color: var(--theme-font-color);
 }
 
 .navBar {
@@ -37,30 +63,52 @@
 .navBar a {
 	color: var(--main-font-color) !important;
 	text-decoration: none !important;
-	font-size: 16px;
+	font-size: 1.5rem;
 	text-transform: uppercase;
 	width: fit-content;
+	padding: 10px;
 }
 
 .menuNav {
-	height: 0;
+	/* height: 0; */
+	position: fixed;
+	top: 0;
+	right: 0;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 	display: flex;
-	background-color: black;
+	background-color: rgba(216, 153, 132, 0.94);
+
+	/* background-color: black; */
 	width: 100%;
+	height: 100vh;
+	overflow: auto;
 	margin: 0;
 	padding: 0;
-	transition: all 0.3s ease-in-out;
+	/* padding: 0; */
+	/* transition: all 0.3s ease-in-out; */
 }
 
-.down .menuNav {
+.menuNav .shown {
+	opacity: 0.97;
+	visibility: visible;
+	transition: opacity 0.3s 0s ease-in-out, visibility 0s 0s linear;
+}
+/* .down .menuNav {
 	height: 80px;
 	padding: 5px 0px;
-}
+} */
 
-button {
+.hamburger {
 	background: transparent;
 	border: none;
+	z-index: 10000;
+}
+
+.header > .hamburger {
+	background-color: black;
+	border-radius: 0.4rem;
 }
 
 .header button:focus {
@@ -72,44 +120,7 @@ button {
 }
 
 @media only screen and (min-device-width: 500px) {
-	/* .header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: 64px;
-		padding: 0px 48px 0px 48px;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		background-color: transparent;
+	.header {
+		padding: 0.2rem 2rem;
 	}
-
-	.header * {
-		color: white;
-		font-size: 24px;
-	}
-
-	.company {
-		align-items: center;
-		font-weight: bold;
-
-		margin: 0;
-	}
-
-	.navBar {
-		font-weight: bold;
-		margin: 0;
-	}
-
-	.navBar a {
-		text-decoration: none;
-		padding: 0 10px;
-		font-size: 20px;
-	}
-
-	.navBar a:hover {
-		text-decoration: none;
-		color: #89a5dd;
-	} */
 }

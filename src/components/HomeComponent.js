@@ -17,6 +17,7 @@ function Home() {
 			<div className="home_content">
 				<div className="home_landing">
 					<div className="landing_content">
+						{/* <div className="header_spacer"></div> */}
 						<h1 className="headline">
 							Expert Health & Fitness Coach
 						</h1>
