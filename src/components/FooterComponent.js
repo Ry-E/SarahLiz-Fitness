@@ -4,7 +4,7 @@ import '../styles/footer.css';
 
 function Footer() {
 	return (
-		<div className="footer">
+		<footer className="footer">
 			<div className="links_container">
 				<div className="links_box">
 					<h2>
@@ -33,12 +33,19 @@ function Footer() {
 
 			<hr />
 			<div className="main_footer">
-				<a href="">facebook</a>
-				<a href="">instagram</a>
+				<a className="footer_link" href="">
+					facebook
+				</a>
+				<a className="footer_link" href="">
+					instagram
+				</a>
 
-				<p class="email">sarahlizfitness@gmail.com</p>
+				<p class="footer_link email">sarahlizfitness@gmail.com</p>
 
-				<a className="attribute" href="https://pngtree.com/so/fitness">
+				<a
+					className="footer_link attribute"
+					href="https://pngtree.com/so/fitness"
+				>
 					fitness png from pngtree.com
 				</a>
 			</div>
@@ -47,7 +54,7 @@ function Footer() {
 				<h2 className="company_header">SarahLiz Fitness</h2>
 				<img className="footer_img" src={beach} alt="" />
 			</div>
-		</div>
+		</footer>
 	);
 }
 

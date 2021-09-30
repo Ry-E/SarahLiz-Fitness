@@ -7,14 +7,16 @@
 	--main-font-color: white;
 	--alt-font-color: black;
 }
-.app {
-	background: linear-gradient(#000000 0%, #000000 70%, aquamarine 99%);
-}
+/* .app {
+	background: linear-gradient(#000000 0%, #000000 78%, aquamarine 99%);
+} */
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
 	margin: 0;
+
+	background-color: darksalmon;
 }
 
 @media only screen and (min-device-width: 500px) {
@@ -22,3 +24,8 @@ body {
 		font-size: 112.5%; /* 18 pixels roughly */
 	}
 }
+/* @media only screen and (min-device-width: 1200px) {
+	.app {
+		background: linear-gradient(#000000 0%, #000000 71%, aquamarine 99%);
+	}
+} */

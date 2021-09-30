@@ -70,7 +70,6 @@
 }
 
 .menuNav {
-	/* height: 0; */
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -79,8 +78,6 @@
 	flex-direction: column;
 	display: flex;
 	background-color: rgba(216, 153, 132, 0.94);
-
-	/* background-color: black; */
 	width: 100%;
 	height: 100vh;
 	overflow: auto;
@@ -95,10 +92,6 @@
 	visibility: visible;
 	transition: opacity 0.3s 0s ease-in-out, visibility 0s 0s linear;
 }
-/* .down .menuNav {
-	height: 80px;
-	padding: 5px 0px;
-} */
 
 .hamburger {
 	background: transparent;

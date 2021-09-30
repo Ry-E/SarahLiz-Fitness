@@ -6,7 +6,7 @@
 	background-position: right;
 	height: 100vh;
 	justify-content: center;
-	align-items: end;
+	align-items: center;
 }
 
 .header_spacer {
@@ -16,6 +16,8 @@
 .landing_content {
 	display: flex;
 	flex-direction: column;
+	/* max-height: -webkit-fill-available; */
+
 	/* align-items: center; */
 	margin: 0px 10px;
 }
@@ -30,8 +32,8 @@
 	font-weight: 600;
 	color: var(--theme-font-color);
 	white-space: pre-wrap;
-	padding: 0 20px 20px;
-	margin: auto;
+	padding: 40px 20px 20px;
+	margin: 0;
 }
 
 .portrait {
@@ -39,16 +41,17 @@
 	max-width: 100%;
 	height: auto;
 	display: block;
-	margin: 20px auto;
+	margin: 1rem auto;
 	box-shadow: 0px 30px 20px -25px black;
 }
 
 .services {
 	font-family: var(--theme-font-family);
-	font-size: 25px;
+	font-size: 1.5rem;
 	color: var(--main-font-color);
 	text-align: center;
 	padding: 20px 0px;
+	margin: 0;
 }
 
 li {
@@ -59,9 +62,7 @@ li {
 	color: black;
 	background-color: aquamarine;
 	padding: 14px 30px;
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 40px;
+	margin: 1rem auto 2rem;
 	border-radius: 25px;
 	text-transform: uppercase;
 	box-shadow: 0px 0px 20px -12px aquamarine;
@@ -69,7 +70,8 @@ li {
 }
 
 .program_container {
-	margin: 3rem 1rem 2rem;
+	background-color: black;
+	padding: 16rem 1.2rem;
 }
 
 .program_heading {
@@ -92,7 +94,7 @@ li {
 @media only screen and (min-device-width: 600px) {
 	.program_container {
 		margin: 3rem 1rem 2rem;
-		padding: 20px 34px;
+		padding: 16rem 1rem;
 	}
 	.program_info {
 		margin: 0 auto;
@@ -102,18 +104,68 @@ li {
 }
 
 @media only screen and (min-device-width: 1200px) {
+	.headline {
+		font-size: 4rem;
+	}
+	.portrait {
+		max-width: 30%;
+		margin: 1rem auto;
+	}
+	.services {
+		font-size: 2rem;
+	}
+	.apply_button {
+		margin: 1rem auto 2rem;
+	}
 	.program_container {
-		margin: 3rem 15rem;
-		padding: 20px 34px;
+		margin: 3rem 12rem;
+		padding: 16rem 3rem;
+	}
+	.program_heading {
+		margin-bottom: 3rem;
 	}
 	.program_info {
-		margin: 0 auto;
+		margin: 0 auto 3rem;
 		text-align: center;
+	}
+}
+@media only screen and (min-device-width: 1400px) {
+	.portrait {
+		max-width: 100%;
+		margin: 4rem auto;
+	}
+	.apply_button {
+		margin: 3rem auto 2rem;
+	}
+	.program_container {
+		margin: 3rem 23rem;
+	}
+	.program_heading {
+		font-size: 2rem;
+	}
+	.program_info {
+		line-height: 2rem;
 	}
 }
 /* height queries */
 @media only screen and (max-device-height: 750px) {
+	.headline {
+		font-size: 1.7rem;
+		padding: 5rem 2rem 0rem;
+		/* margin: 1rem 0.8rem; */
+	}
 	.portrait {
-		max-width: 80%;
+		width: 80%;
+		margin: 1rem auto;
+	}
+	.services {
+		margin: 0;
+		padding: 0 0 1rem;
+	}
+	.apply_button {
+		margin: 1rem auto 2rem;
+	}
+	.program_container {
+		padding: 8rem 1rem;
 	}
 }

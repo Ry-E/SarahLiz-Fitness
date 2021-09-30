@@ -8,7 +8,7 @@ import '../styles/main.css';
 
 function Main() {
 	return (
-		<div className="main">
+		<main className="main">
 			<Switch>
 				<Route exact path="/">
 					<Home />
@@ -20,7 +20,7 @@ function Main() {
 					<ProgramView />
 				</Route>
 			</Switch>
-		</div>
+		</main>
 	);
 }
 

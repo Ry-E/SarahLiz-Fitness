@@ -34,7 +34,7 @@ function Header() {
 	}
 
 	return (
-		<div className="fixed_nav" id="header">
+		<header className="fixed_nav" id="header">
 			<button className="hamburger" onClick={toggleModal}>
 				{modalOpen ? (
 					<MdClose
@@ -93,7 +93,7 @@ function Header() {
 					</ul>
 				</Modal>
 			</nav>
-		</div>
+		</header>
 	);
 }
 
