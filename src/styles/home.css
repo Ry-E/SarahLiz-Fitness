@@ -105,14 +105,14 @@ li {
 
 @media only screen and (min-device-width: 1200px) {
 	.headline {
-		font-size: 4rem;
+		font-size: 3.2rem;
 	}
 	.portrait {
-		max-width: 30%;
+		max-width: 35%;
 		margin: 1rem auto;
 	}
 	.services {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.apply_button {
 		margin: 1rem auto 2rem;
@@ -130,12 +130,15 @@ li {
 	}
 }
 @media only screen and (min-device-width: 1400px) {
+	.headline {
+		font-size: 4rem;
+	}
 	.portrait {
-		max-width: 100%;
+		max-width: 40%;
 		margin: 4rem auto;
 	}
 	.services {
-		font-size: 3rem;
+		font-size: 2.6rem;
 	}
 	.apply_button {
 		margin: 3rem auto 2rem;

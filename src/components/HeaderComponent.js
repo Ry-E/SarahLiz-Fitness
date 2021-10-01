@@ -65,6 +65,9 @@ function Header() {
 					/>
 				)}
 			</button>
+			<NavLink className="company" id="company" to="/" exact>
+				SarahLiz Fitness
+			</NavLink>
 			<Nav style={style.div} />
 			<nav className="navBar">
 				<Modal

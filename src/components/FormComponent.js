@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/form.css';
 
 function Form() {
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	let handleSubmit = event => {
 		const form = document.getElementById('myForm');
 		event.preventDefault();
 		sendData();
+		setIsSubmitted(true);
 
 		function sendData() {
 			console.log('Attempting to send data');
@@ -29,6 +31,13 @@ function Form() {
 			console.log('Sent data');
 		}
 	};
+	if (isSubmitted == true) {
+		return (
+			<p className="form_response">
+				Thanks, your application was successfully sent!
+			</p>
+		);
+	}
 
 	return (
 		<div className="application">

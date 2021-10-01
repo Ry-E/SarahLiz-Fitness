@@ -5,6 +5,18 @@ form {
 	font-family: var(--theme-font-family);
 	letter-spacing: 0.5px;
 	background: linear-gradient(darksalmon, aquamarine);
+	border-radius: 0.4rem;
+}
+
+.form_response {
+	top: 40%;
+	font-size: 2rem;
+	border-radius: 0.4rem;
+	padding: 1rem;
+	font-family: var(--theme-font-family);
+	letter-spacing: 0.5px;
+	background: linear-gradient(darksalmon, aquamarine);
+	text-align: center;
 }
 
 input,
@@ -83,4 +95,10 @@ form div {
 .radios label {
 	padding: 0 5px;
 	font-weight: normal;
+}
+
+@media only screen and (min-device-width: 1200px) {
+	.form_response {
+		padding: 4rem;
+	}
 }
