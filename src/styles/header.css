@@ -66,7 +66,7 @@
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	width: fit-content;
-	padding: 10px;
+	padding: 0.8rem 2rem;
 }
 
 .menuNav {
@@ -83,7 +83,6 @@
 	overflow: auto;
 	margin: 0;
 	padding: 0;
-	/* padding: 0; */
 	/* transition: all 0.3s ease-in-out; */
 }
 
@@ -124,5 +123,23 @@
 
 	.fixed_nav {
 		padding: 0.2rem 2rem;
+	}
+}
+@media only screen and (min-device-width: 1200px) {
+	.header {
+		padding: 0;
+	}
+	.fixed_nav {
+		flex-direction: row-reverse;
+	}
+	.nav_bar {
+		padding: 0.02rem 2.6rem;
+		align-items: center;
+	}
+	.hamburger {
+		display: none;
+	}
+	.company {
+		font-size: 1.4rem;
 	}
 }

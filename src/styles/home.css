@@ -134,6 +134,9 @@ li {
 		max-width: 100%;
 		margin: 4rem auto;
 	}
+	.services {
+		font-size: 3rem;
+	}
 	.apply_button {
 		margin: 3rem auto 2rem;
 	}

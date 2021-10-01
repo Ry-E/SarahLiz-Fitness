@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 import '../styles/header.css';
+import Nav from './NavComponent';
 import Modal from './ModalComponent';
 import { NavLink } from 'react-router-dom';
 
@@ -12,17 +13,14 @@ function Header() {
 		setModalOpen(prev => !prev);
 	};
 
-	let style = {
-		button: {
-			display: 'none',
-		},
-	};
+	var navBackground = 'transparent';
 
 	window.onscroll = function () {
-		scrollNav();
+		scrollNav(navBackground);
 	};
 
-	function scrollNav() {
+	function scrollNav(navBackground) {
+		// console.log(navBackground);
 		if (
 			document.body.scrollTop > window.innerHeight ||
 			document.documentElement.scrollTop > window.innerHeight
@@ -32,6 +30,17 @@ function Header() {
 			document.getElementById('header').className = 'fixed_nav';
 		}
 	}
+	let style = {
+		button: {
+			display: 'none',
+		},
+		div: {
+			backgroundColor: `${navBackground}`,
+		},
+		nav: {
+			display: 'block',
+		},
+	};
 
 	return (
 		<header className="fixed_nav" id="header">
@@ -56,9 +65,7 @@ function Header() {
 					/>
 				)}
 			</button>
-			<NavLink className="company" to="/" exact>
-				SarahLiz Fitness
-			</NavLink>
+			<Nav style={style.div} />
 			<nav className="navBar">
 				<Modal
 					onClose={toggleModal}
@@ -66,6 +73,7 @@ function Header() {
 					style={style.button}
 				>
 					<ul className={`menuNav ${modalOpen ? 'shown' : 'hidden'}`}>
+						{/* <Nav style={style.div} /> */}
 						<NavLink
 							id="navlink"
 							to="/"

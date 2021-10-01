@@ -4,7 +4,7 @@ import '../styles/footer.css';
 
 function Footer() {
 	return (
-		<footer className="footer">
+		<footer className="footer" id="footer">
 			<div className="links_container">
 				<div className="links_box">
 					<h2>
@@ -32,7 +32,7 @@ function Footer() {
 			</div>
 
 			<hr />
-			<div className="main_footer">
+			<div className="main_footer" id="main_footer">
 				<a className="footer_link" href="">
 					facebook
 				</a>
@@ -52,7 +52,7 @@ function Footer() {
 			<hr />
 			<div className="ending_footer">
 				<h2 className="company_header">SarahLiz Fitness</h2>
-				<img className="footer_img" src={beach} alt="" />
+				{/* <img className="footer_img" src={beach} alt="" /> */}
 			</div>
 		</footer>
 	);
