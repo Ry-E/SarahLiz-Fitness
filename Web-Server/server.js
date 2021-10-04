@@ -3,6 +3,7 @@ const statik = require('node-static');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const config = require('./config/secrets');
 const formidable = require('formidable');
 const nodemailer = require('nodemailer');
 
@@ -12,8 +13,8 @@ const port = process.env.PORT || 3001;
 let transporter = nodemailer.createTransport({
 	service: 'Gmail',
 	auth: {
-		user: 'ryaneldon24@gmail.com',
-		pass: 'neo.bird',
+		user: config.emailUsername,
+		pass: config.emailPassword,
 	},
 });
 
