@@ -69,6 +69,10 @@ li {
 	border: none;
 }
 
+button:focus {
+	outline: none;
+}
+
 .program_container {
 	background-color: black;
 	padding: 16rem 1.2rem;
