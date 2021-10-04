@@ -8,7 +8,7 @@ const formidable = require('formidable');
 const nodemailer = require('nodemailer');
 
 // hostname = 'localhost';
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || '3001';
 
 let transporter = nodemailer.createTransport({
 	service: 'Gmail',
