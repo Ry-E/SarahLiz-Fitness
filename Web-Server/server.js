@@ -26,6 +26,7 @@ let transporter = nodemailer.createTransport({
 
 let myPath = '/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build';
 // const file = new statik.Server(myPath);
+let fileLoc;
 const createFileLoc = req => {
 	let staticBasePath = './build';
 	let resolvedBase = path.resolve(staticBasePath);
