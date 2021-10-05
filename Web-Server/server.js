@@ -146,7 +146,7 @@ const staticServe = function (req, res) {
 
 		res.writeHead(200, {
 			'Content-Type': 'text/plain',
-			'Access-Control-Allow-Origin': 'http://localhost:3000',
+			// 'Access-Control-Allow-Origin': 'http://localhost:3000',
 		});
 		res.end('Thanks, your application was successfully sent!');
 	}
