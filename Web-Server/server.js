@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 // const { noEmptyFiles } = require('formidable/FormidableError');
 
 // hostname = 'localhost';
-const port = process.env.PORT;
+let port = process.env.PORT;
 if (port == null || port == '') {
 	port = 3001;
 }
@@ -30,13 +30,9 @@ let myPath = '/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build';
 const staticServe = function (req, res) {
 	let staticBasePath = './build';
 
-	const createFileLoc = req => {
-		// let staticBasePath = './build';
-		let resolvedBase = path.resolve(staticBasePath);
-		let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
-		let fileLoc = path.join(resolvedBase, safeSuffix);
-		return fileLoc;
-	};
+	let resolvedBase = path.resolve(staticBasePath);
+	let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
+	let fileLoc = path.join(resolvedBase, safeSuffix);
 
 	let myNextPath =
 		'/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build/index.html';
@@ -68,27 +64,27 @@ const staticServe = function (req, res) {
 			}
 		});
 	} else if (req.url.match('.css$')) {
-		createFileLoc(req);
-		console.log(fileLoc);
-		let cssPath = path.join(fileLoc, req.url);
+		// createFileLoc(req);
+		console.log('hello there: ' + fileLoc);
+		let cssPath = path.join(fileLoc);
 		var fileStream = fs.createReadStream(cssPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/css' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.js$')) {
-		createFileLoc(req);
-		let jsPath = path.join(fileLoc, req.url);
+		// createFileLoc(req);
+		let jsPath = path.join(fileLoc);
 		var fileStream = fs.createReadStream(jsPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/javascript' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.png$')) {
-		createFileLoc(req);
-		let pngPath = path.join(fileLoc, req.url);
+		// createFileLoc(req);
+		let pngPath = path.join(fileLoc);
 		var fileStream = fs.createReadStream(pngPath);
 		res.writeHead(200, { 'Content-Type': 'image/png' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.jpeg$')) {
-		createFileLoc(req);
-		let jpegPath = path.join(fileLoc, req.url);
+		// createFileLoc(req);
+		let jpegPath = path.join(fileLoc);
 		var fileStream = fs.createReadStream(jpegPath);
 		res.writeHead(200, { 'Content-Type': 'image/jpeg' });
 		fileStream.pipe(res);
