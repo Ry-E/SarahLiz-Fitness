@@ -76,6 +76,8 @@ const staticServe = function (req, res) {
 	} else if (req.url === '/api' && req.method.toLowerCase() === 'post') {
 		let form = formidable.IncomingForm();
 
+		console.log('form: ' + form);
+
 		form.parse(req, function (err, fields) {
 			if (err) {
 				console.log(err.message);
