@@ -6,6 +6,7 @@ const http = require('http');
 const config = require('./config/secrets');
 const formidable = require('formidable');
 const nodemailer = require('nodemailer');
+const { noEmptyFiles } = require('formidable/FormidableError');
 
 // hostname = 'localhost';
 const port = process.env.PORT || 3001;
@@ -13,8 +14,10 @@ const port = process.env.PORT || 3001;
 let transporter = nodemailer.createTransport({
 	service: 'Gmail',
 	auth: {
-		user: config.emailUsername,
-		pass: config.emailPassword,
+		// user: config.emailUsername,
+		// pass: config.emailPassword,
+		user: 'ryaneldon24@gmail.com',
+		pass: 'neo.bird',
 	},
 });
 
