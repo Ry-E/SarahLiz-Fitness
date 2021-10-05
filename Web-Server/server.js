@@ -60,22 +60,22 @@ const staticServe = function (req, res) {
 			}
 		});
 	} else if (req.url.match('.css$')) {
-		let cssPath = path.join(fileLoc, req.url);
+		let cssPath = path.join(__dirname, req.url);
 		var fileStream = fs.createReadStream(cssPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/css' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.js$')) {
-		let jsPath = path.join(fileLoc, req.url);
+		let jsPath = path.join(__dirname, req.url);
 		var fileStream = fs.createReadStream(jsPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/javascript' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.png$')) {
-		let pngPath = path.join(fileLoc, req.url);
+		let pngPath = path.join(__dirname, req.url);
 		var fileStream = fs.createReadStream(pngPath);
 		res.writeHead(200, { 'Content-Type': 'image/png' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.jpeg$')) {
-		let jpegPath = path.join(fileLoc, req.url);
+		let jpegPath = path.join(__dirname, req.url);
 		var fileStream = fs.createReadStream(jpegPath);
 		res.writeHead(200, { 'Content-Type': 'image/jpeg' });
 		fileStream.pipe(res);
