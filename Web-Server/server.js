@@ -43,6 +43,8 @@ const staticServe = function (req, res) {
 		let fileLoc = path.join(resolvedBase, safeSuffix + 'index.html');
 		console.log('fileLoc: ' + fileLoc);
 
+		console.log(req.url);
+
 		// fs.readFile(myNextPath, 'utf8', function (err, data) {
 		// Serve static file
 		fs.readFile(fileLoc, function (err, data) {
