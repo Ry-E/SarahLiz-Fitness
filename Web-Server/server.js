@@ -26,17 +26,17 @@ let transporter = nodemailer.createTransport({
 
 let myPath = '/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build';
 // const file = new statik.Server(myPath);
-let fileLoc;
-const createFileLoc = req => {
-	let staticBasePath = './build';
-	let resolvedBase = path.resolve(staticBasePath);
-	let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
-	let fileLoc = path.join(resolvedBase, safeSuffix);
-	return fileLoc;
-};
 
 const staticServe = function (req, res) {
 	let staticBasePath = './build';
+
+	const createFileLoc = req => {
+		// let staticBasePath = './build';
+		let resolvedBase = path.resolve(staticBasePath);
+		let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
+		let fileLoc = path.join(resolvedBase, safeSuffix);
+		return fileLoc;
+	};
 
 	let myNextPath =
 		'/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build/index.html';
@@ -69,6 +69,7 @@ const staticServe = function (req, res) {
 		});
 	} else if (req.url.match('.css$')) {
 		createFileLoc(req);
+		console.log(fileLoc);
 		let cssPath = path.join(fileLoc, req.url);
 		var fileStream = fs.createReadStream(cssPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/css' });
