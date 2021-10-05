@@ -24,9 +24,6 @@ let transporter = nodemailer.createTransport({
 	},
 });
 
-let myPath = '/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build';
-// const file = new statik.Server(myPath);
-
 const staticServe = function (req, res) {
 	// Restrict the path to only return files in the given directory
 	let staticBasePath = './build';
