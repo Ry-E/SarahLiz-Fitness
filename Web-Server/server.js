@@ -40,14 +40,14 @@ const staticServe = function (req, res) {
 		console.log('resolvedBase: ' + resolvedBase);
 		let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
 		console.log('safeSuffix: ' + safeSuffix);
-		let fileLoc = path.join(resolvedBase, safeSuffix + 'index.html');
+		let fileLoc = path.join(resolvedBase, safeSuffix);
 		console.log('fileLoc: ' + fileLoc);
 
 		console.log(req.url);
 
 		// fs.readFile(myNextPath, 'utf8', function (err, data) {
 		// Serve static file
-		fs.readFile(fileLoc, function (err, data) {
+		fs.readFile(fileLoc + 'index.html', function (err, data) {
 			if (err) {
 				res.writeHead(404, 'Not Found');
 				res.end(JSON.stringify(err));
@@ -60,22 +60,22 @@ const staticServe = function (req, res) {
 			}
 		});
 	} else if (req.url.match('.css$')) {
-		let cssPath = path.join(myPath, req.url);
+		let cssPath = path.join(fileLoc, req.url);
 		var fileStream = fs.createReadStream(cssPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/css' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.js$')) {
-		let jsPath = path.join(myPath, req.url);
+		let jsPath = path.join(fileLoc, req.url);
 		var fileStream = fs.createReadStream(jsPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/javascript' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.png$')) {
-		let pngPath = path.join(myPath, req.url);
+		let pngPath = path.join(fileLoc, req.url);
 		var fileStream = fs.createReadStream(pngPath);
 		res.writeHead(200, { 'Content-Type': 'image/png' });
 		fileStream.pipe(res);
 	} else if (req.url.match('.jpeg$')) {
-		let jpegPath = path.join(myPath, req.url);
+		let jpegPath = path.join(fileLoc, req.url);
 		var fileStream = fs.createReadStream(jpegPath);
 		res.writeHead(200, { 'Content-Type': 'image/jpeg' });
 		fileStream.pipe(res);
