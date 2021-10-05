@@ -29,19 +29,17 @@ const staticServe = function (req, res) {
 
 	if (req.url === '/' && req.method.toLowerCase() === 'get') {
 		// file.serve(req, res);
-		//Restrict the path to only return files in the given directory
-		// let resolvedBase = path.resolve(staticBasePath);
-		// console.log('resolvedBase: ' + resolvedBase);
-		// let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
-		// console.log('safeSuffix: ' + safeSuffix);
-		// let fileLoc = path.join(resolvedBase, safeSuffix);
-		// console.log('fileLoc: ' + fileLoc);
-		//Serve static file
-		// res.end(fileLoc + __dirname);
+		// Restrict the path to only return files in the given directory
+		let resolvedBase = path.resolve(staticBasePath);
+		console.log('resolvedBase: ' + resolvedBase);
+		let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
+		console.log('safeSuffix: ' + safeSuffix);
+		let fileLoc = path.join(resolvedBase, safeSuffix + 'index.html');
+		console.log('fileLoc: ' + fileLoc);
 
-		fs.readFile(myNextPath, 'utf8', function (err, data) {
-			// fs.readFile(__dirname + req.url, function (err, files) {
-
+		// fs.readFile(myNextPath, 'utf8', function (err, data) {
+		// Serve static file
+		fs.readFile(fileLoc, function (err, data) {
 			if (err) {
 				res.writeHead(404, 'Not Found');
 				res.end(JSON.stringify(err));
