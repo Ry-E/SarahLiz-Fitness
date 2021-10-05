@@ -28,28 +28,17 @@ let myPath = '/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build';
 // const file = new statik.Server(myPath);
 
 const staticServe = function (req, res) {
+	// Restrict the path to only return files in the given directory
 	let staticBasePath = './build';
-
 	let resolvedBase = path.resolve(staticBasePath);
 	let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
 	let fileLoc = path.join(resolvedBase, safeSuffix);
 
-	let myNextPath =
-		'/Users/Adob3/Desktop/NucampFolder/sarahliz-fitness/build/index.html';
-
 	if (req.url === '/' && req.method.toLowerCase() === 'get') {
-		// file.serve(req, res);
-		// Restrict the path to only return files in the given directory
-		let resolvedBase = path.resolve(staticBasePath);
-		console.log('resolvedBase: ' + resolvedBase);
-		let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
-		console.log('safeSuffix: ' + safeSuffix);
-		let fileLoc = path.join(resolvedBase, safeSuffix);
-		console.log('fileLoc: ' + fileLoc);
+		// let resolvedBase = path.resolve(staticBasePath);
+		// let safeSuffix = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
+		// let fileLoc = path.join(resolvedBase, safeSuffix);
 
-		console.log(req.url);
-
-		// fs.readFile(myNextPath, 'utf8', function (err, data) {
 		// Serve static file
 		fs.readFile(fileLoc + 'index.html', function (err, data) {
 			if (err) {
@@ -65,7 +54,6 @@ const staticServe = function (req, res) {
 		});
 	} else if (req.url.match('.css$')) {
 		// createFileLoc(req);
-		console.log('hello there: ' + fileLoc);
 		let cssPath = path.join(fileLoc);
 		var fileStream = fs.createReadStream(cssPath, 'UTF-8');
 		res.writeHead(200, { 'Content-Type': 'text/css' });
