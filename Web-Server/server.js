@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-// const config = require('./config/secrets');
 const formidable = require('formidable');
 const nodemailer = require('nodemailer');
 // const { noEmptyFiles } = require('formidable/FormidableError');
