@@ -159,5 +159,7 @@ const staticServe = function (req, res) {
 const server = http.createServer(staticServe);
 
 server.listen(port, () => {
-	console.log(`Server running at https://localhost:${port}/`);
+	console.log(
+		`Server running at https://localhost:${port}/ + ${process.env.EMAIL_USERNAME}`
+	);
 });
