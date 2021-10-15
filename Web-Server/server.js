@@ -14,16 +14,6 @@ if (port == null || port == '') {
 	port = 3001;
 }
 
-let transporter = nodemailer.createTransport({
-	service: 'Gmail',
-	auth: {
-		// user: config.emailUsername,
-		// pass: config.emailPassword,
-		user: 'ryaneldon24@gmail.com',
-		pass: 'neo.bird',
-	},
-});
-
 const staticServe = function (req, res) {
 	// Restrict the path to only return files in the given directory
 	let staticBasePath = './build';
@@ -74,6 +64,15 @@ const staticServe = function (req, res) {
 		res.writeHead(200, { 'Content-Type': 'image/jpeg' });
 		fileStream.pipe(res);
 	} else if (req.url === '/api' && req.method.toLowerCase() === 'post') {
+		let transporter = nodemailer.createTransport({
+			service: 'Gmail',
+			auth: {
+				// user: config.emailUsername,
+				// pass: config.emailPassword,
+				user: 'ryaneldon24@gmail.com',
+				pass: 'neo.bird',
+			},
+		});
 		let form = formidable.IncomingForm();
 
 		console.log('form: ' + form);
