@@ -1,5 +1,4 @@
 'use strict';
-const statik = require('node-static');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
@@ -7,6 +6,7 @@ const http = require('http');
 const formidable = require('formidable');
 const nodemailer = require('nodemailer');
 // const { noEmptyFiles } = require('formidable/FormidableError');
+require('dotenv').config();
 
 // hostname = 'localhost';
 let port = process.env.PORT;
@@ -67,10 +67,10 @@ const staticServe = function (req, res) {
 		let transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
-				// user: config.emailUsername,
-				// pass: config.emailPassword,
-				user: 'ryaneldon24@gmail.com',
-				pass: 'neo.bird',
+				user: process.env.EMAIL_USERNAME,
+				pass: process.env.EMAIL_PASSWORD,
+				// user: 'ryaneldon24@gmail.com',
+				// pass: 'neo.bird',
 			},
 		});
 		let form = formidable.IncomingForm();
