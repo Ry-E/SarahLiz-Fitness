@@ -1,6 +1,10 @@
 # How I worked on this project
+  My goal was to gain a deeper understanding of some core technology while also exploring real work environments
+    ∙ I built the http server with vanilla node.js: Screenshot of server code
+    ∙ I used vanilla css and custom ui components for design
+    ∙ 
 # How to navigate this project
-## Why I built the project this way
+# Why I built the project this way
 # If I had more time I would change this
 
 ## Available Scripts
