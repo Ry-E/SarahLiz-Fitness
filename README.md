@@ -1,9 +1,7 @@
 # How I worked on this project
   My goal was to gain a deeper understanding of some core technology while also exploring real work environments
   
-  * I built the http server with vanilla node.js:
-    
-  ![Screen Shot 2021-11-10 at 11 30 10 PM](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)
+  * I built the http server with vanilla node.js: screenshot of [server](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)
     
   * I used vanilla css with media queries to make a responsive website:
 
