@@ -1,15 +1,11 @@
 # How I worked on this project
   My goal was to gain a deeper understanding of some core technology while also exploring real work environments
   
-  * I built the http server with vanilla node.js: screenshot of [server](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)
+  * I built the http server with vanilla node.js: [Screenshot of server](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)
     
-  * I used vanilla css with media queries to make a responsive website:
-
-  ![Screen Shot 2021-11-11 at 12 12 11 AM](https://user-images.githubusercontent.com/47878230/141241172-2804ec08-3e69-4c21-8214-ba136f7fd879.png)
-
+  * I used vanilla css with media queries to make a responsive website: [Screenshot of media query](https://user-images.githubusercontent.com/47878230/141241172-2804ec08-3e69-4c21-8214-ba136f7fd879.png)
   
-  * I worked with tasks on a github project board: 
-  ![Screen Shot 2021-11-10 at 11 27 47 PM](https://user-images.githubusercontent.com/47878230/141241031-a6405a66-3755-468b-a2a4-44126d6c9f8b.png)
+  * I worked with tasks on a github project board: [Screenshot of tasks](https://user-images.githubusercontent.com/47878230/141241031-a6405a66-3755-468b-a2a4-44126d6c9f8b.png)
 
   
 
