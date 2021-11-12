@@ -1,17 +1,17 @@
 # How I worked on this project
   My goal was to gain a deeper understanding of some core technology while also exploring real work environments
   
-  * I built the http server with vanilla node.js: [Screenshot of server](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)
-    
-  * I used vanilla css with media queries to make a responsive website: [Screenshot of media query](https://user-images.githubusercontent.com/47878230/141241172-2804ec08-3e69-4c21-8214-ba136f7fd879.png)
-  
+  * I built the http server with vanilla node.js: [Screenshot of server](https://user-images.githubusercontent.com/47878230/141239383-89176f2d-bf70-4beb-aee8-3a437da7b24c.png)  
+  * I used vanilla css with media queries to make a responsive website: [Example media query](https://user-images.githubusercontent.com/47878230/141241172-2804ec08-3e69-4c21-8214-ba136f7fd879.png)
   * I worked with tasks on a github project board: [Screenshot of tasks](https://user-images.githubusercontent.com/47878230/141241031-a6405a66-3755-468b-a2a4-44126d6c9f8b.png)
+  * I used development and production branches and pull requests: [Example PR](https://user-images.githubusercontent.com/47878230/141242711-78f9830f-e72c-47e6-81e1-1cc625d00d4a.png)
 
-  
-
-
-    
 # How to navigate this project
+  * Somewhat complex stateful logic: Example code
+  * The application sends emails with the Nodemailer API: [Example code](![Screen Shot 2021-11-11 at 7 00 03 PM](https://user-images.githubusercontent.com/47878230/141386194-164f7711-59e2-4326-9eb9-1f0085120328.png)
+  * Form submissions were pasred with the Formidable API: [Example code](![Screen Shot 2021-11-11 at 7 10 14 PM](https://user-images.githubusercontent.com/47878230/141386978-0a79c401-5a1f-4d8e-9cf4-a30083f19a8a.png)
+
+
 # Why I built the project this way
 # If I had more time I would change this
 
